@@ -1,0 +1,22 @@
+1- COPY AND PASTE THE FOLDER INSIDE THE FOLDER ''DATA''
+2-OPEN YOU ''system.def'' AND CHANGE THIS PART IN ''fight = fight.def'' to ''fight = sf3ts/fight.def'' see:
+
+BEFORE WAS THIS WAY:
+[Files]
+spr = system.sff          ;Filename of sprite data
+snd = system.snd          ;Filename of sound data
+logo.storyboard =         ;Logo storyboard definition (optional)
+intro.storyboard =        ;Intro storyboard definition (optional)
+select = select.def       ;Character and stage selection list
+fight = fight.def         ;Fight definition filename
+
+AFTER MUST BE THIS WAY:
+
+[Files]
+spr = system.sff          ;Filename of sprite data
+snd = system.snd          ;Filename of sound data
+logo.storyboard =         ;Logo storyboard definition (optional)
+intro.storyboard =        ;Intro storyboard definition (optional)
+select = select.def       ;Character and stage selection list
+fight = sf3ts/fight.def  ;Fight definition filename  >>>>>HERE IN THIS LINE YOU ONLY HAVE TO CHANGE THIS OK<<<<<
+

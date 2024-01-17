@@ -1,0 +1,16 @@
+;0 always import the palette, 1 import only if all colors doesn't match to any existing palette
+noDuplicatePal = 0
+
+[PaletteDef]
+group = 0
+number = 11
+file = 0-11.act
+
+[SpriteDef]
+group = 8900
+image = 0
+xaxis = 196
+yaxis = 113
+flags = 0
+palette = 0,11
+file = 8900-0.png

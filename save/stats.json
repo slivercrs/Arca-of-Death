@@ -1,0 +1,39 @@
+{
+  "modes": {
+    "freebattle": {
+      "playtime": 741.93
+    },
+    "training": {
+      "playtime": 0
+    },
+    "arcade": {
+      "playtime": 57.16,
+      "clear": 0,
+      "clearcount": [
+
+      ],
+      "ranking": [
+        {
+          "score": 10600,
+          "time": 56.13,
+          "name": "",
+          "chars": [
+            "terryrr/terry.def"
+          ],
+          "tmode": 0,
+          "ailevel": 5,
+          "win": 0,
+          "lose": 1,
+          "consecutive": 0
+        }
+      ]
+    },
+    "versus": {
+      "playtime": 1582.65
+    },
+    "netplayversus": {
+      "playtime": 70.82
+    }
+  },
+  "playtime": 2452.56
+}

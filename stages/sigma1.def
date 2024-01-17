@@ -1,0 +1,197 @@
+[Info]
+name = "Sigma: Stage 1"
+
+[Camera]
+startx = 0
+starty = 0
+
+; bound**** triggers set the length of a stage. to make a stage higher ; to fit your pictures, make the boundhigh variable a higher negative  ; number.
+boundleft = -170
+boundright = 270
+boundhigh = -200
+boundlow = 0
+verticalfollow = .5
+
+tension = 100
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1startz = 0            ;Starting z coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+ ;No need to change these values
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+ ;Distance from left/right edge of screen that player can move to
+ ;Typically 15
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 194
+autoturn = 1
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+color = 128,128,128
+yscale = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/24 Sigma Stage 1.mp3
+;bgmusic = sound/Allen.mp3
+;bgmusic = sound/RyuEX+A.mp3
+bgvolume = 100
+bgmloopend = 5421256
+
+;========================================================
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+ ;Filename of sprite data
+spr = stages\sigma1.sff
+debugbg = 0
+
+;----------
+
+[BG mountains]
+type  = normal
+spriteno = 0, 0
+layerno = 0                
+start = 0, 241
+delta = .2, .5
+mask  = 0
+tile  = 1, 0
+tilespacing = 0,0
+
+[BG clouds]
+type  = normal
+spriteno = 0, 1
+start = 0, 59
+layerno = 0
+delta = .2, .5
+mask = 0
+tile = 1, 0
+tilespacing = 0, 0
+
+[BG bg buildings]
+type  = normal
+spriteno = 0, 2
+start = 0, 210
+layerno = 0
+delta = .2, .5
+mask = 1
+tile = 1, 0
+tilespacing = 30, 0
+
+[BG tall building]
+type  = normal
+spriteno = 11, 0
+start = -150, 191
+layerno = 0
+delta = 1, 1
+mask = 1
+tile = 0, 0
+tilespacing = 0, 0
+
+[BG tall building]
+type  = normal
+spriteno = 11, 0
+start = 345, 191
+layerno = 0
+delta = 1, 1
+mask = 1
+tile = 0, 0
+tilespacing = 0, 0
+
+[BG taller building]
+type  = normal
+spriteno = 11, 1
+start = 395, 191
+layerno = 0
+delta = 1, 1
+mask = 1
+tile = 0, 0
+tilespacing = 0, 0
+
+[BG taller building]
+type  = normal
+spriteno = 11, 1
+start = -267, 191
+layerno = 0
+delta = 1, 1
+mask = 1
+tile = 0, 0
+tilespacing = 0, 0
+
+[BG taller building]
+type  = normal
+spriteno = 11, 1
+start = 50, 191
+layerno = 0
+delta = 1, 1
+mask = 1
+tile = 0, 0
+tilespacing = 0, 0
+
+[BG floor]
+type  = normal
+spriteno = 1, 0
+layerno = 0                
+start = -330, 240
+delta = 1, 1
+mask  = 1
+
+;----------
+
+[BG wide building]
+type  = anim
+spriteno = 10, 0
+layerno = 0
+mask = 1
+start = -450, 18
+delta = 1, 1
+actionno = 1
+
+[BG wide building]
+type  = anim
+spriteno = 10, 0
+layerno = 0
+mask = 1
+start = 60, 18
+delta = 1, 1
+actionno = 1
+
+[Begin Action 1]
+Loopstart
+10,0, 0,0, 12
+10,1, 0,0, 12
+10,2, 0,0, 12
+10,1, 0,0, 12

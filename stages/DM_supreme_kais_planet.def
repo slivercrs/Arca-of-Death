@@ -1,0 +1,189 @@
+[Info]
+name = "[DM] Supreme Kai's Planet"
+author = "DooM"
+;credits/thanks = Saiyajin Mui, for ripping all the materials that have been used to make this stage
+
+[Camera]
+startx = 0
+starty = 0
+
+boundleft = -600
+boundright = 600
+boundhigh = -300
+boundlow = 0
+verticalfollow = .5
+floortension = 15
+tension = 80
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 215
+autoturn = 1
+resetBG = 1
+hires = 1
+
+[Shadow]
+intensity = 75
+color = 0,0,0
+yscale = .3
+fade.range = 0,0
+
+[Reflection]
+intensity = 0
+
+[Music]
+bgmusic = sound/dmsupremekaisplanet.mp3
+bgvolume = 255
+
+[BGdef]
+spr = DM_supreme_kais_planet.sff
+debugbg = 0
+
+[BG sky]
+type  = normal
+spriteno = 5, 0               
+start = -1131, 260
+velocity = 0, 0
+delta = .3, .3
+mask  = 0
+
+[BG bg3 antialias]
+type  = normal
+spriteno = 4, 1
+start = -950, 250
+delta = .4, .4
+mask = 1
+trans = sub
+
+[BG bg3]
+type  = normal
+spriteno = 4, 0
+start = -950, 250
+delta = .4, .4
+mask = 1
+trans = add
+
+[BG clouds]
+type  = normal
+spriteno = 5, 1
+layerno = 0                
+start = -1139, 130
+velocity = .1, 0
+delta = .3, .3
+trans = addalpha
+alpha = 128, 256
+
+[BG bg2 antialias]
+type  = normal
+spriteno = 3, 1
+start = -1131, 670
+delta = 1.0, 1.0
+mask = 1
+trans = sub
+
+[BG bg2]
+type  = normal
+spriteno = 3, 0
+start = -1131, 670
+delta = 1.0, 1.0
+mask = 1
+trans = add
+
+[BG Waterfalls anim]
+type = anim
+actionno = 2
+start = -1092,452
+delta = 1.0, 1.0
+
+[BG bg12 antialias]
+type  = normal
+spriteno = 6, 1
+start = -800, 450
+delta = 1.2, 1.2
+mask = 1
+trans = sub
+
+[BG bg12]
+type  = normal
+spriteno = 6, 0
+start = -800, 450
+delta = 1.2, 1.2
+mask = 1
+trans = add
+
+[BG bg1 antialias]
+type  = normal
+spriteno = 1, 1
+start = -1131, 460
+delta = 1.35, 1.35
+mask = 1
+trans = sub
+
+[BG bg1]
+type  = normal
+spriteno = 1, 0
+start = -1131, 460
+delta = 1.35, 1.35
+mask = 1
+trans = add
+
+[BG Waterfall anim]
+type = anim
+actionno = 1
+start = 69,460
+delta = 1.35, 1.35
+
+[BG ground antialias]
+type  = normal
+spriteno = 0, 0
+start = -1862, 570
+delta = 2, 2
+mask = 1
+trans = sub
+
+[BG ground]
+type  = normal
+spriteno = 0, 1
+start = -1862, 570
+delta = 2, 2
+mask = 1
+trans = add
+
+;Waterfall anim 1
+[Begin Action 1]
+7,0,0,0,5,,AS164D256
+7,3,0,0,5,,AS164D256
+7,2,0,0,5,,AS164D256
+7,1,0,0,5,,AS164D256
+
+;Waterfall anim 2
+[Begin Action 2]
+8,0,0,0,5,,AS164D256
+8,2,0,0,5,,AS164D256
+8,1,0,0,5,,AS164D256
+8,3,0,0,5,,AS164D256

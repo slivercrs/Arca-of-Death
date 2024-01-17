@@ -1,0 +1,130 @@
+[Info]
+name = "battlefield"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -185
+boundright = 185
+boundhigh = -133
+boundlow = 0
+verticalfollow = .10
+tension = 60
+floortenstion = 30
+startzoom = 0.25
+zoomin = .95
+zoomout = .90
+
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 212
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+intensity = 70
+color = 30,14,158
+yscale = .2
+fade.range = -150, -75
+reflect = 0
+
+ ;Width and height of the local coordinate space of the stage.
+localcoord = 320, 240
+
+ ;Horizontal and vertical scaling factor for drawing.
+xscale = 1
+yscale = 1
+
+ ;Number of pixels beyond the top and bottom of the screen that may
+ ;be drawn.  Overdraw specifies the how much can be seen during an
+ ;EnvShake.  Overdraw pixels will also be used when the screen aspect
+ ;is taller than the stage aspect.
+overdrawhigh = 0
+overdrawlow = 0
+
+ ;Number of pixels into the top and bottom of the screen that may be
+ ;cut from drawing when the screen aspect is shorter than the stage
+ ;aspect.  These parameters suggest a guideline, and the actual
+ ;number of pixels cut depends on the difference in aspect.
+cuthigh = 35
+cutlow = 25
+
+[Music]
+bgmusic = sound/battlefield.mp3
+bgvolume = 255
+
+[BGdef]
+spr = stages/battlefield.sff
+debugbg = 0
+
+
+[BG sky]
+type = normal
+spriteno =1,0
+start = 0, 120
+trans = none
+mask  = 0
+;delta = .61
+;velocity = -.5,0
+tile = 1,1
+
+[BG stadiumz]
+type = parallax
+spriteno =1,1
+start = -160, 120
+trans = none
+mask  = 1
+delta = 1.5,1
+;velocity = -.5,0
+tile = 1,0
+xscale = 1, 0.75918
+
+
+ 
+
+
+ 
+
+
+[BG Dirtz]
+
+type = parallax
+spriteno =4,0
+start = 0, 30
+trans = none
+mask  = 1
+;delta = .7
+xscale = 1, 0.75918
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,337 @@
+;Street Fighter III Third Strike Sean Stage.
+;Come join us! We can keep Mugen alive!
+;Thanks to Joram "ZweiFuss" Nowak for his Great SF 3 Sprites!
+;He can be found at: http://www.zweifuss.com
+
+;This Stage Includes all animations!
+;Future updates are probable. :)
+;Enjoy!
+
+;This Stage is intended for personal use! SF3 sprites are property of Capcom.
+;They are not to be sold under any circumstances. 
+;Please DO NOT upload these files on your site. This will keep creators making stuff and people enjoying it. Thanks!
+===============||Mugen History||==============
+;This is Sean Stage from Street Fighter III Third Strike
+;Released: June 18, 2005
+;Author: Ruben
+;E-mail: Trunks_1000000pw@MugenHistory.com
+;Http://www.MugenHistory.com
+;Christina..... My inspiration.
+===============||Mugen History||==============
+[Info]
+ ;Name of the stage.
+name = "Brazil - Santos Harbor"
+;Author: Ruben
+;--------------------------------------------------------
+[Camera]
+startx = 490
+starty = 0
+boundleft 	= -221
+boundright 	= 221
+boundhigh 	= -177
+boundlow 	= -10
+verticalfollow = .8
+floortension = 70
+tension = 50
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = 220        
+p1starty = 0            
+p1startz = 0            
+p1facing = 1           
+
+;--- Player 2 ---
+p2startx = 275
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+leftbound  = -1000 
+rightbound =  1000 
+topbound  =  0     
+botbound  =  0     
+
+;--------------------------------------------------------
+[Scaling]
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 17  
+screenright = 17   
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 204
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+color = 75,75,75
+yscale = 0.1
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/1-10 Sean & Oro Stage -THE LONGSHOREMAN-.mp3
+bgvolume = 100
+bgmloopstart = 691911
+bgmloopend = 8832046
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+spr = stages/SF3Sean.sff
+debugbg = 0
+;----------
+[BG 0]
+type  = normal
+spriteno = 0, 0
+layerno = 0                
+start = 0, 0
+delta = .8,.95
+trans = none
+mask  = 0
+tile  = 0, 0
+tilespacing = 0,0
+window = 0,0, 319, 239
+windowdelta = 0,0
+
+;----------
+[BG building]
+type  = normal
+spriteno = 1,0
+start = 0, 11
+delta = .90
+mask = 1
+;----------
+[BG object2]
+type  = normal
+spriteno = 2,0
+start = 0, 11
+delta = .85
+mask=1
+layerno=0
+;----------
+[BG bag dropping]
+type  = anim
+actionno= 3
+start = 0, 11
+delta = 1
+mask=1
+layerno=0
+id= 3
+
+[begin action 3]
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,1,20
+3,0,0,2,20
+3,0,0,3,20
+3,0,0,4,20
+3,0,0,5,20
+3,0,0,6,20
+3,0,0,7,20
+3,0,0,8,20
+3,0,0,9,20
+3,0,0,10,20
+3,0,0,11,20
+3,0,0,12,20
+3,0,0,13,20
+3,0,0,14,20
+3,0,0,15,20
+3,0,0,16,20
+3,0,0,17,20
+3,0,0,18,20
+3,0,0,19,20
+3,0,0,20,20
+3,0,0,21,20
+3,0,0,22,20
+3,0,0,23,20
+3,0,0,24,20
+3,0,0,25,20
+3,0,0,26,20
+3,0,0,27,20
+3,0,0,28,20
+3,0,0,29,20
+3,0,0,30,20
+3,0,0,31,20
+3,0,0,32,20
+3,0,0,33,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,34,20
+3,0,0,33,20
+3,0,0,32,20
+3,0,0,31,20
+3,0,0,30,20
+3,0,0,29,20
+3,0,0,28,20
+3,0,0,27,20
+3,0,0,26,20
+3,0,0,25,20
+3,0,0,24,20
+3,0,0,23,20
+3,0,0,22,20
+3,0,0,21,20
+3,0,0,20,20
+3,0,0,19,20
+3,0,0,18,20
+3,0,0,17,20
+3,0,0,16,20
+3,0,0,15,20
+3,0,0,14,20
+3,0,0,13,20
+3,0,0,12,20
+3,0,0,11,20
+3,0,0,10,20
+3,0,0,9,20
+3,0,0,8,20
+3,0,0,7,20
+3,0,0,6,20
+3,0,0,5,20
+3,0,0,4,20
+3,0,0,3,20
+3,0,0,2,20
+3,0,0,1,20
+;----------
+[BG background]
+type  = normal
+spriteno = 4,0
+start = 0, 11
+delta = 1,1
+mask = 1
+tile = 1, 0
+;------------
+[BG convey]
+type  = anim
+actionno= 5
+start = 0, 11
+delta = 1
+mask=1
+layerno=0
+id= 5
+
+[begin action 5]
+5,1,0,0,10
+5,2,0,0,10
+5,3,0,0,10
+5,4,0,0,10
+5,5,0,0,10
+5,6,0,0,10
+5,7,0,0,10
+5,8,0,0,10
+5,9,0,0,10
+5,10,0,0,10
+5,11,0,0,10
+5,12,0,0,10
+5,13,0,0,10
+5,14,0,0,10
+5,15,0,0,10
+5,16,0,0,10
+;----------
+[BG dude]
+type  = anim
+actionno= 6
+start = 0, 11
+delta = 1
+mask=1
+layerno=0
+id= 6
+
+[begin action 6]
+6,1,0,0,8
+6,2,0,0,8
+6,3,0,0,8
+6,4,0,0,8
+6,5,0,0,8
+6,6,0,0,8
+6,7,0,0,8
+6,8,0,0,8
+6,9,0,0,8
+6,10,0,0,8
+6,11,0,0,8
+6,12,0,0,8
+6,13,0,0,8
+6,14,0,0,8
+6,15,0,0,8
+6,16,0,0,8
+6,17,0,0,8
+6,18,0,0,8
+6,19,0,0,8
+6,20,0,0,8
+6,21,0,0,8
+6,22,0,0,8
+6,23,0,0,8
+6,24,0,0,8
+6,25,0,0,8
+6,26,0,0,8
+6,27,0,0,8
+;--------------
+[BG bag 1]
+type  = normal
+spriteno = 7,0
+start = 0,11
+delta = .99
+mask = 1
+tile = 0, 0
+layerno = 1
+;----------
+[BG bag 2]
+type  = normal
+spriteno = 8,0
+start = 0,11
+delta = .99
+mask = 1
+layerno = 1
+;-----------
+;========
+; Disclaimer
+;========
+;Elecbyte,Ruben or MugenHistory will not be held liable for any damages to either ;the user or the system it is run on, that may occur as a direct or indirect
+;result of the use of MUGEN and its associated tools.(stages,chars,life bars, etc.) ;Elecbyte,Ruben or MugenHistory holds
+;no responsibility for the actions of the user, including but not
+;limited to the user's infringement on the intellectual rights of
+;others. 
+
+[BG Dlinkoro]
+type  = anim
+actionno= 9
+start = 0, 11
+delta = 1, 1
+mask=1
+layerno=0
+
+[Begin Action 9]
+9,0, 0,0, 6
+9,1, 0,0, 6
+9,2, 0,0, 6
+9,3, 0,0, 6
+9,4, 0,0, 6
+9,5, 0,0, 6
+9,6, 0,0, 6
+9,7, 0,0, 6

@@ -1,0 +1,349 @@
+;0 always import the palette, 1 import only if all colors doesn't match to any existing palette
+noDuplicatePal = 0
+
+[PaletteDef]
+group = 0
+number = 2
+file = 0-2.act
+
+[SpriteDef]
+group = 8000
+image = 0
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-0.png
+
+[SpriteDef]
+group = 8000
+image = 1
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-1.png
+
+[SpriteDef]
+group = 8000
+image = 2
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-2.png
+
+[SpriteDef]
+group = 8000
+image = 3
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-3.png
+
+[SpriteDef]
+group = 8000
+image = 4
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-4.png
+
+[SpriteDef]
+group = 8000
+image = 5
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-5.png
+
+[SpriteDef]
+group = 8000
+image = 6
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-6.png
+
+[SpriteDef]
+group = 8000
+image = 7
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-7.png
+
+[SpriteDef]
+group = 8000
+image = 8
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-8.png
+
+[SpriteDef]
+group = 8000
+image = 9
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-9.png
+
+[SpriteDef]
+group = 8000
+image = 10
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-10.png
+
+[SpriteDef]
+group = 8000
+image = 11
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-11.png
+
+[SpriteDef]
+group = 8000
+image = 12
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-12.png
+
+[SpriteDef]
+group = 8000
+image = 13
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-13.png
+
+[SpriteDef]
+group = 8000
+image = 14
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-14.png
+
+[SpriteDef]
+group = 8000
+image = 15
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-15.png
+
+[SpriteDef]
+group = 8000
+image = 16
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-16.png
+
+[SpriteDef]
+group = 8000
+image = 17
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-17.png
+
+[SpriteDef]
+group = 8000
+image = 18
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-18.png
+
+[SpriteDef]
+group = 8000
+image = 19
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-19.png
+
+[SpriteDef]
+group = 8000
+image = 20
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-20.png
+
+[SpriteDef]
+group = 8000
+image = 21
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-21.png
+
+[SpriteDef]
+group = 8000
+image = 22
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-22.png
+
+[SpriteDef]
+group = 8000
+image = 23
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-23.png
+
+[SpriteDef]
+group = 8000
+image = 24
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-24.png
+
+[SpriteDef]
+group = 8000
+image = 25
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-25.png
+
+[SpriteDef]
+group = 8000
+image = 26
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-26.png
+
+[SpriteDef]
+group = 8000
+image = 27
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-27.png
+
+[SpriteDef]
+group = 8000
+image = 28
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-28.png
+
+[SpriteDef]
+group = 8000
+image = 29
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-29.png
+
+[SpriteDef]
+group = 8000
+image = 30
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-30.png
+
+[SpriteDef]
+group = 8000
+image = 31
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-31.png
+
+[SpriteDef]
+group = 8000
+image = 32
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-32.png
+
+[SpriteDef]
+group = 8000
+image = 33
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-33.png
+
+[SpriteDef]
+group = 8000
+image = 34
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-34.png
+
+[SpriteDef]
+group = 8000
+image = 35
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-35.png
+
+[SpriteDef]
+group = 8000
+image = 36
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-36.png
+
+[SpriteDef]
+group = 8000
+image = 37
+xaxis = 211
+yaxis = 164
+flags = 0
+palette = 0,2
+file = 8000-37.png

@@ -1,0 +1,116 @@
+;-------------------------------------------------------------------------------------------
+; DarkValentine presents:
+; "Mr. X's Hideout"
+; Original Creation
+;-------------------------------------------------------------------------------------------
+; Credit goes to Cerisier, for making the original coding for his stages. And
+; allowing anyone to modify and distribute the stage, as they see fit. Contact information
+; is located below
+;-------------------------------------------------------------------------------------------
+; contact & autorisation:
+; for cresier:
+; cerisier_mugen@hotmail.fr (en français, in english & auf Deutsch)
+;
+; For DarkValentine :
+; DarkSabinValentine@gmail.com
+;
+; français:
+; vous pouvez distribuer ou modifier librement mes données.
+; (ce serait tout de même sympa de m'inclure dans les crédits dans ce dernier cas!)
+; english:
+; you can freely modify or distribute my work.
+; (it would be nice to mention my name in your credits in this case!!)
+; Deutsch:
+; Sie können wie sie wollen meine Arbeit verwenden um ihre eigene Idee zu verwirklichen.
+; (in diesem Fall, vergessen sie bitte nicht meine name irgendwo zu geben)
+;-------------------------------------------------------------------------------------------
+; un grand merci à mike werewolf sans les conseils duquel ce stage ne serait pas ce qu'il est!
+; ce stage a été posté pour la première fois sur son site: http://mike.mugen.free.fr/
+; merci aussi à dark saviour pour ses infos sur la compilation des sprites et son programme MCMFIX.
+; je termine en mentionnant ades qui m'a conseillé de découper l'image originale pour restreindre
+; la perte de couleur.
+; bon vent et salut à toute la communauté.
+; cerisier
+;-------------------------------------------------------------------------------------------
+[Info]
+name="Mr. X's Hideout"
+author="DarkValentine"
+
+;-------------------------------------------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -2898
+boundright = 2898
+boundhigh = -38
+boundlow = 0
+verticalfollow = 0.3
+floortension = 65
+tension = 50
+startzoom = 0.25
+zoomin = 1
+zoomout = .90
+;-------------------------------------------------------------------------------------------
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -6000
+rightbound = 6000
+topbound = 0
+botbound = 0
+;-------------------------------------------------------------------------------------------
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+;-------------------------------------------------------------------------------------------
+[Bound]
+screenleft = 15
+screenright = 15
+;-------------------------------------------------------------------------------------------
+[StageInfo]
+zoffset = 200
+autoturn = 1
+resetBG = 1
+;-------------------------------------------------------------------------------------------
+[Shadow]
+color = 32,32,32
+yscale = .1
+reflect = 0
+;-------------------------------------------------------------------------------------------
+[Music]
+bgmusic = sound/04 Attack Of The Barbarian.mp3
+bgvolume = 100
+bgmloopstart= 3633046
+bgmloopend = 6603849
+;-------------------------------------------------------------------------------------------
+[BGdef]
+spr = stages/mrxhide.sff
+debugbg = 0
+;-------------------------------------------------------------------------------------------
+[BG Black]
+type = normal
+spriteno = 1, 0
+start = 0, 0
+trans = none
+layerno = 0
+delta = 0, 0
+tile = 1, 1
+mask = 0
+
+[BG hideout]
+type = normal
+spriteno = 0,0
+start = 0, 0
+trans = none
+layerno = 0
+delta = 1, 1
+mask = 0
+

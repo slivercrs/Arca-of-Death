@@ -1,0 +1,187 @@
+;0 always import the palette, 1 import only if all colors doesn't match to any existing palette
+noDuplicatePal = 0
+
+[PaletteDef]
+group = 0
+number = 7
+file = 0-7.act
+
+[SpriteDef]
+group = 8360
+image = 0
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-0.png
+
+[SpriteDef]
+group = 8360
+image = 1
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-1.png
+
+[SpriteDef]
+group = 8360
+image = 2
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-2.png
+
+[SpriteDef]
+group = 8360
+image = 3
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-3.png
+
+[SpriteDef]
+group = 8360
+image = 4
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-4.png
+
+[SpriteDef]
+group = 8360
+image = 5
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-5.png
+
+[SpriteDef]
+group = 8360
+image = 6
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-6.png
+
+[SpriteDef]
+group = 8360
+image = 7
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-7.png
+
+[SpriteDef]
+group = 8360
+image = 8
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-8.png
+
+[SpriteDef]
+group = 8360
+image = 9
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-9.png
+
+[SpriteDef]
+group = 8360
+image = 10
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-10.png
+
+[SpriteDef]
+group = 8360
+image = 11
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-11.png
+
+[SpriteDef]
+group = 8360
+image = 12
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-12.png
+
+[SpriteDef]
+group = 8360
+image = 13
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-13.png
+
+[SpriteDef]
+group = 8360
+image = 14
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-14.png
+
+[SpriteDef]
+group = 8360
+image = 15
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-15.png
+
+[SpriteDef]
+group = 8360
+image = 16
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-16.png
+
+[SpriteDef]
+group = 8360
+image = 17
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-17.png
+
+[SpriteDef]
+group = 8360
+image = 18
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-18.png
+
+[SpriteDef]
+group = 8360
+image = 19
+xaxis = 139
+yaxis = 97
+flags = 0
+palette = 0,7
+file = 8360-19.png

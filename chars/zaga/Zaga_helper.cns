@@ -1,0 +1,56 @@
+;AI起動用ヘルパー
+[Statedef 20000]
+anim = 9999
+ctrl = 0
+
+[State 20000, SelfState]
+type = SelfState
+trigger1 = !IsHelper
+value = 0
+
+[State 20000, VarSet]
+type = VarSet
+trigger1 = Command = "up" && Root,Command = "up"
+trigger2 = Command = "down" && Root,Command = "down"
+trigger3 = Command = "back" && Root,Command = "back"
+trigger4 = Command = "fwd" && Root,Command = "fwd"
+trigger5 = Command = "a" && Root,Command = "a"
+trigger6 = Command = "b" && Root,Command = "b"
+trigger7 = Command = "c" && Root,Command = "c"
+trigger8 = Command = "x" && Root,Command = "x"
+trigger9 = Command = "y" && Root,Command = "y"
+trigger10 = Command = "z" && Root,Command = "z"
+trigger11 = Command = "start" && Root,Command = "start"
+var(59) = -1
+
+[State 20000, DestroySelf]
+Type = DestroySelf
+triggerall = IsHelper
+trigger1 = Root,var(59) || var(59) = -1
+trigger2 = Command = "up" && Root,Command = "up"
+trigger3 = Command = "down" && Root,Command = "down"
+trigger4 = Command = "back" && Root,Command = "back"
+trigger5 = Command = "fwd" && Root,Command = "fwd"
+trigger6 = Command = "a" && Root,Command = "a"
+trigger7 = Command = "b" && Root,Command = "b"
+trigger8 = Command = "c" && Root,Command = "c"
+trigger9 = Command = "x" && Root,Command = "x"
+trigger10 = Command = "y" && Root,Command = "y"
+trigger11 = Command = "z" && Root,Command = "z"
+trigger12 = Command = "start" && Root,Command = "start"
+
+[State 20000, VarSet]
+type = VarSet
+triggerall = var(59) != -1
+trigger1 = Root,Command = "up"
+trigger2 = Root,Command = "down"
+trigger3 = Root,Command = "back"
+trigger4 = Root,Command = "fwd"
+trigger5 = Root,Command = "a"
+trigger6 = Root,Command = "b"
+trigger7 = Root,Command = "c"
+trigger8 = Root,Command = "x"
+trigger9 = Root,Command = "y"
+trigger10 = Root,Command = "z"
+trigger11 = Root,Command = "start"
+var(59) = 1

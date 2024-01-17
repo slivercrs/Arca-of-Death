@@ -1,0 +1,230 @@
+[Info]
+name = "Yoshi's Island"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = -20
+boundleft = -100
+boundright = 100
+boundhigh = -100
+boundlow = 0
+verticalfollow = .3
+floortension = 0
+tension = 50
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1startz = 0            ;Starting z coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 179
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+color = 32,32,32
+yscale = 0
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/yoshi.mp3
+bgvolume = 0
+
+;========================================================
+;--------------------------------------------------------
+; Background definition
+; ***
+;-------------------------------------
+; [BG x]
+; type = ?       "Normal"/"Parallax"/"Height"  (def: "normal")
+; spriteno = ?, ? Sprite group and number: groupno, imgno  (req'd)
+; start = ?, ?   Starting location (integer)  (def: 0, 0)
+; delta = ?, ?   Change in location per camera unit moved (float)  (def: 1,1)
+; trans = ?      Transparency settings: "none"/"add"/"sub"/"avg" (def: "none")
+; mask = ?       Masking (int): 0 - off, 1 - on  (def: 0)
+; velocity = ?, ? Velocity: x, y (float): speed background moves (def: 0, 0)
+; tile = ?, ?    Tiling: xtile, ytile (int): 0 - off, 1 - infinite,
+;                        >1 - tile that number of times  (def: 0, 0)
+; tilespacing = ?, ? Tiling: x, y (int) : space between tiles (def: 0, 0)
+;  Parallax-only:
+; xscale = ?, ?    Top xscale, bottom xscale (float) (if used, then no tiling)
+; width = ?, ?     Top width, bottom width (int)  (if used, then tiles;
+;                             use either this or above, but not both)
+; yscalestart = ?  Starting y-scale (float, in percent)  (def: 100)
+; yscaledelta = ?  Change in y-scale per unit (float, in percent)  (def: 0)
+;-------------------------------------
+
+;-------------------------------------
+[BGdef]
+spr = stages/yoshiisland.sff
+debugbg = 1
+
+;----------
+[BG 0]
+type = normal
+spriteno = 0,0
+start = -302,-20
+delta = 0.125,0.125
+tile = 2,0
+
+;----------
+[BG 1]
+type  = anim
+actionno = 5
+start = -192,1
+delta = 0.25,0.25
+mask  = 1
+
+[Begin Action 5]
+5,0, 0,0,8
+5,1, 0,0,8
+5,2, 0,0,8
+5,3, 0,0,8
+
+;----------
+[BG 2]
+type  = anim
+actionno = 6
+start = -144,-26
+delta = 0.25,0.25
+mask  = 1
+
+[Begin Action 6]
+6,1, 0,0,6
+6,2, 0,0,8
+6,3, 0,0,8
+6,0, 0,0,8
+6,1, 0,0,2
+
+;----------
+[BG 3]
+type  = anim
+actionno = 6
+start = 144,-26
+delta = 0.25,0.25
+mask  = 1
+
+;----------
+[BG 4]
+type  = anim
+actionno = 7
+start = 63,-41
+delta = 0.25,0.25
+mask  = 1
+
+[Begin Action 7]
+6,1, 0,0,6,H
+6,2, 0,0,8,H
+6,3, 0,0,8,H
+6,0, 0,0,8,H
+6,1, 0,0,2,H
+
+;----------
+[BG 5]
+type  = normal
+spriteno = 0,10
+start = -256,-25
+delta = 0.25,0.25
+mask  = 1
+
+;----------
+[BG 6]
+type  = normal
+spriteno = 10,0
+start = -270,139
+delta = 1,1
+mask  = 1
+
+;----------
+[BG 7]
+type  = normal
+spriteno = 20,0
+start = -272,160
+delta = 1.2,1.2
+mask  = 1
+layerno = 1
+tile = 2
+tilespacing = 15,0
+
+;----------
+[BG 8]
+type  = anim
+actionno = 21
+start = -103,173
+delta = 1.2,1.2
+mask  = 1
+layerno = 1
+
+[Begin Action 21]
+21,0, 0,0,10
+21,1, 0,0,4
+21,2, 0,0,4
+21,3, 0,0,4
+21,4, 0,0,4
+21,5, 0,0,4
+21,6, 0,0,4
+21,7, 0,0,10
+21,6, 0,0,4
+21,5, 0,0,4
+21,4, 0,0,4
+21,3, 0,0,4
+21,2, 0,0,4
+21,1, 0,0,4
+
+;----------
+[BG 9]
+type  = anim
+actionno = 22
+start = 118,205
+delta = 1.2,1.2
+mask  = 1
+layerno = 1
+
+[Begin Action 22]
+21,6, 0,0,4,H
+21,7, 0,0,10,H
+21,6, 0,0,4,H
+21,5, 0,0,4,H
+21,4, 0,0,4,H
+21,3, 0,0,4,H
+21,2, 0,0,4,H
+21,1, 0,0,4,H
+21,0, 0,0,10,H
+21,1, 0,0,4,H
+21,2, 0,0,4,H
+21,3, 0,0,4,H
+21,4, 0,0,4,H
+21,5, 0,0,4,H

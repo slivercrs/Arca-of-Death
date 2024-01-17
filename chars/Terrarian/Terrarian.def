@@ -1,0 +1,30 @@
+[Info]
+name="Terrarian"
+displayname="Vein"
+versiondate=27/05/2020
+mugenversion=1.0
+author="Monkeyx5"
+pal.defaults=1,2,3,4,5,6,7,8,9,10,11,12
+[Files]
+sprite=Terrarian.sff
+sound=Terrarian.snd
+anim=Terrarian.air
+cmd=Terrarian.cmd
+cns=Terrarian.cns
+st=Terrarian.cns
+stcommon=common1.cns
+pal1=Terrarian.act
+pal2=Terrarian 2.act
+pal3=Terrarian 3.act
+pal4=Terrarian 4.act
+pal5=Terrarian 5.act
+pal6=Terrarian 6.act
+pal7=Terrarian 7.act
+pal8=Terrarian 8.act
+pal9=Terrarian 9.act
+pal10=Terrarian 10.act
+pal11=Terrarian 11.act
+pal12=Terrarian 12.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

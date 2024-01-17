@@ -1,0 +1,4293 @@
+[Info]
+name = "DBFZ World Tournament Arena"
+;displayname = "DBFZ World Tournament Arena"
+;versiondate = 09,30,2009
+;mugenversion = 1.1
+author = "jafar"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -105
+boundright = 105
+boundhigh = -990
+boundlow = 10
+verticalfollow = 1.1
+floortension = 99
+tension = 80
+overdrawhigh = 0
+overdrawlow = 0
+cuthigh = 35
+cutlow = 25
+zoomout = 0.75
+zoomin = 1.00
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 215
+autoturn = 1
+resetBG = 0    ;1e.
+localcoord = 320, 240
+hires = 1
+xscale = 0.25
+yscale = 0.25
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 96
+color = 0,0,0
+yscale = .3
+fade.range = 0,0
+
+;--------------------------------------------------------
+[Reflection]
+intensity = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/[DBFZ]World_Tournament_Arena.mp3
+;bgmloopstart = <sample number>
+;bgmloopend = <sample number>
+bgmvolume = 100
+
+;========================================================
+;--------------------------------------------------------
+; Background definition
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+spr = [DBFZ]World_Tournament_Arena.sff
+debugbg = 0
+
+[BG SKY back]
+type  = normal
+spriteno = 400, 0
+layerno = 0
+start = 0, -420
+delta = 0, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG SKY R]
+type  = normal
+spriteno = 3500, 0
+layerno = 0
+start = 0, -420
+delta = 0, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG SKY G]
+type  = normal
+spriteno = 3500, 1
+layerno = 0
+start = 0, -420
+delta = 0, 0.30
+mask  = 1
+zoomdelta = 0.30
+trans = add
+
+[BG SKY B]
+type  = normal
+spriteno = 3500, 2
+layerno = 0
+start = 0, -420
+delta = 0, 0.30
+mask  = 1
+zoomdelta = 0.30
+trans = add
+
+[BG Clouds back]
+type  = normal
+spriteno = 1, 0
+layerno = 0
+start = 1900, -400
+delta = 0.20, 0.30
+mask  = 1
+trans = addalpha
+alpha = 139,256
+velocity = -0.50,-.0
+tile  = 1,1
+tilespacing = 0, 990
+zoomdelta = 0.30
+
+[BG Clouds]
+type  = normal
+spriteno = 1, 0
+layerno = 0
+start = 1900, -400
+delta = 0.20, 0.30
+mask  = 1
+trans = addalpha
+alpha = 99,226
+velocity = -0.50,-.0
+tile  = 1,1
+tilespacing = 0, 990
+zoomdelta = 0.30
+
+[BG Building 1]
+type  = normal
+spriteno = 1, 33
+layerno = 0
+start = 50, 450
+delta = 0.20, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG Building 2]
+type  = normal
+spriteno = 1, 34
+layerno = 0
+start = 390, 400
+delta = 0.20, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG Building 3]
+type  = normal
+spriteno = 1, 35
+layerno = 0
+start = 140, 300
+delta = 0.20, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG Building 4]
+type  = normal
+spriteno = 1, 31
+layerno = 0
+start = -150, 450
+delta = 0.20, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG Building 5]
+type  = normal
+spriteno = 1, 32
+layerno = 0
+start = -150, 410
+delta = 0.20, 0.30
+mask  = 1
+zoomdelta = 0.30
+
+[BG green floor back]
+type  = normal
+spriteno = 1, 4
+layerno = 0
+start = 0, -200
+delta = 0, 0.90
+mask  = 1
+
+[BG PALMS BACK CENTER stela A]
+type  = anim
+actionno = 70002
+layerno = 0
+start = -290, 420
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK CENTER A]
+type  = anim
+actionno = 70001 
+layerno = 0
+start = -290, 420
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK CENTER stela B]
+type  = anim
+actionno = 70102
+layerno = 0
+start = 290, 450
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK CENTER B]
+type  = anim
+actionno = 70101 
+layerno = 0
+start = 290, 450
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK RIGHT stela A]
+type  = anim
+actionno = 70102
+layerno = 0
+start = 620, 650
+delta = 1.35, 0.75
+mask  = 1
+-
+[BG PALMS BACK RIGHT A]
+type  = anim
+actionno = 70101 
+layerno = 0
+start = -620, 650
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK RIGHT stela B]
+type  = anim
+actionno = 70102
+layerno = 0
+start = 620, 650
+delta = 1.35, 0.75
+mask  = 1
+
+[BG PALMS BACK RIGHT B]
+type  = anim
+actionno = 70101 
+layerno = 0
+start = 620, 650
+delta = 1.35, 0.75
+mask  = 1
+
+[BG Back wait room A]
+type  = normal
+spriteno = 1, 22
+layerno = 0
+start = -50, 0
+delta = 1.30, 0.80
+mask  = 1
+
+[BG Back wait room B]
+type  = normal
+spriteno = 1, 23
+layerno = 0
+start = 50, 0
+delta = 1.30, 0.90
+mask  = 1
+
+[BG FLAG 1 - Blue A]
+type  = anim
+actionno = 101
+layerno = 0
+start = -800, 650
+delta = 1.33, 0.80
+mask  = 1
+
+[BG FLAG 2 - orange A]
+type  = anim
+actionno = 200
+layerno = 0
+start = -500, 550
+delta = 1.33, 0.80
+mask  = 1
+
+[BG FLAG 3 - magenta A]
+type  = anim
+actionno = 301
+layerno = 0
+start = -300, 400
+delta = 1.33, 0.80
+mask  = 1
+
+[BG FLAG 4 - magenta B]
+type  = anim
+actionno = 300
+layerno = 0
+start = 300, 400
+delta = 1.33, 0.80
+mask  = 1
+
+[BG FLAG 5 - orange B]
+type  = anim
+actionno = 201
+layerno = 0
+start = 500, 550
+delta = 1.33, 0.80
+mask  = 1
+
+[BG FLAG 6 - Blue B]
+type  = anim
+actionno = 100
+layerno = 0
+start = 800, 650
+delta = 1.33, 0.80
+mask  = 1
+
+[BG PALMS LEFT FRONT stela A]
+type  = anim
+actionno = 70002
+layerno = 0
+start = -1200, 450
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS LEFT FRONT A]
+type  = anim
+actionno = 70001 
+layerno = 0
+start = -1200, 450
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS LEFT FRONT stela B]
+type  = anim
+actionno = 70102
+layerno = 0
+start = -900, 600
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS LEFT FRONT B]
+type  = anim
+actionno = 70101
+layerno = 0
+start = -900, 600
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS RIGHT FRONT stela B]
+type  = anim
+actionno = 70102
+layerno = 0
+start = 900, 600
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS RIGHT FRONT B]
+type  = anim
+actionno = 70101
+layerno = 0
+start = 900, 600
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS RIGHT FRONT stela B]
+type  = anim
+actionno = 70102
+layerno = 0
+start = 1200, 450
+delta = 1.35, 0.85
+mask  = 1
+
+[BG PALMS RIGHT FRONT B]
+type  = anim
+actionno = 70101
+layerno = 0
+start = 1200, 450
+delta = 1.35, 0.85
+mask  = 1
+
+[BG Wait Room - inside R]
+type  = normal
+spriteno = 3400, 0
+layerno = 0
+start = 0, 0
+delta = 1.38, 0.85
+mask  = 1
+
+[BG Wait Room - inside G]
+type  = normal
+spriteno = 3400, 1
+layerno = 0
+start = 0, 0
+delta = 1.38, 0.85
+mask  = 1
+trans = add
+
+[BG Wait Room - inside B]
+type  = normal
+spriteno = 3400, 2
+layerno = 0
+start = 0, 0
+delta = 1.38, 0.85
+mask  = 1
+trans = add
+
+[BG Inside window Light A]
+type  = anim
+actionno = 900
+layerno = 0
+start = -65, 520
+delta = 1.45, 1.00
+mask  = 1
+
+[BG Inside window Light B]
+type  = anim
+actionno = 901
+layerno = 0
+start = -75, 520
+delta = 1.45, 0.90
+mask  = 1
+
+[BG Inside window Light C]
+type  = anim
+actionno = 903
+layerno = 0
+start = -55, 520
+delta = 1.45, 0.90
+mask  = 1
+
+[BG Wait Room - Top A R]
+type  = normal
+spriteno = 110, 0
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+
+[BG Wait Room - Top A G]
+type  = normal
+spriteno = 110, 1
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Top A B]
+type  = normal
+spriteno = 110, 2
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Top B R]
+type  = normal
+spriteno = 111, 0
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+
+[BG Wait Room - Top B G]
+type  = normal
+spriteno = 111, 1
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Top B B]
+type  = normal
+spriteno = 111, 2
+layerno = 0
+start = 0, 4
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Statue A]
+type  = normal
+spriteno = 1, 18
+layerno = 0
+start = 0, 4
+delta = 1.46, 0.90
+mask  = 1
+
+[BG Wait Room - Statue B]
+type  = normal
+spriteno = 1, 19
+layerno = 0
+start = 0, 4
+delta = 1.46, 0.90
+mask  = 1
+
+[BG Wait Room - Statue Center up]
+type  = normal
+spriteno = 1, 17
+layerno = 0
+start = 0, 61
+delta = 1.38, 0.85
+mask  = 1
+
+[BG Wait Room - Top up R]
+type  = normal
+spriteno = 113, 0
+layerno = 0
+start = 0, 41
+delta = 1.40, 0.88
+mask  = 1
+
+[BG Wait Room - Top up G]
+type  = normal
+spriteno = 113, 1
+layerno = 0
+start = 0, 41
+delta = 1.40, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Top up B]
+type  = normal
+spriteno = 113, 2
+layerno = 0
+start = 0, 41
+delta = 1.40, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Demon face Statue]
+type  = normal
+spriteno = 1, 15
+layerno = 0
+start = 0, 22
+delta = 1.43, 0.91
+mask  = 1
+
+[BG Wait Room - Fliyer Shadow]
+type  = normal
+spriteno = 1, 26
+layerno = 0
+start = 0, 37
+delta = 1.45, 0.92
+mask  = 1
+trans = sub
+
+[BG Wait Room - Fliyer R]
+type  = normal
+spriteno = 112, 0
+layerno = 0
+start = 0, 17
+delta = 1.49, 0.93
+mask  = 1
+
+[BG Wait Room - Fliyer G]
+type  = normal
+spriteno = 112, 1
+layerno = 0
+start = 0, 17
+delta = 1.49, 0.93
+mask  = 1
+trans = add
+
+[BG Wait Room - Fliyer B]
+type  = normal
+spriteno = 112, 2
+layerno = 0
+start = 0, 17
+delta = 1.49, 0.93
+mask  = 1
+trans = add
+
+[BG Wait Room - left R]
+type  = normal
+spriteno = 118, 0
+layerno = 0
+start = 4, 10
+delta = 1.43, 0.85
+mask  = 1
+
+[BG Wait Room - left G]
+type  = normal
+spriteno = 118, 1
+layerno = 0
+start = 4, 10
+delta = 1.43, 0.85
+mask  = 1
+trans = add
+
+[BG Wait Room - left B]
+type  = normal
+spriteno = 118, 2
+layerno = 0
+start = 4, 10
+delta = 1.43, 0.85
+mask  = 1
+trans = add
+
+[BG Wait Room - right R]
+type  = normal
+spriteno = 119, 0
+layerno = 0
+start = -4, 10
+delta = 1.43, 0.85
+mask  = 1
+
+[BG Wait Room - right G]
+type  = normal
+spriteno = 119, 1
+layerno = 0
+start = -4, 10
+delta = 1.43, 0.85
+mask  = 1
+trans = add
+
+[BG Wait Room - right B]
+type  = normal
+spriteno = 119, 2
+layerno = 0
+start = -4, 10
+delta = 1.43, 0.85
+mask  = 1
+trans = add
+
+[BG Wait Room - tree left 0]
+type  = anim
+actionno = 60001
+layerno = 0
+start = -1130, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree left 1]
+type  = anim
+actionno = 60001
+layerno = 0
+start = -880, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree left 2]
+type  = anim
+actionno = 60002
+layerno = 0
+start = -630, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree left 3]
+type  = anim
+actionno = 60001
+layerno = 0
+start = -380, 630
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree right 1]
+type  = anim
+actionno = 60003
+layerno = 0
+start = 380, 630
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree right 2]
+type  = anim
+actionno = 60001
+layerno = 0
+start = 630, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree right 3]
+type  = anim
+actionno = 60002
+layerno = 0
+start = 880, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - tree right 4]
+type  = anim
+actionno = 60002
+layerno = 0
+start = 1130, 600
+delta = 1.44, 0.90
+mask  = 1
+
+[BG Wait Room - Wall right A R]
+type  = normal
+spriteno = 115, 0
+layerno = 0
+start = 5, 0
+delta = 1.45, 0.88
+mask  = 1
+
+[BG Wait Room - Wall right A G]
+type  = normal
+spriteno = 115, 1
+layerno = 0
+start = 5, 0
+delta = 1.45, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Wall right A B]
+type  = normal
+spriteno = 115, 2
+layerno = 0
+start = 5, 0
+delta = 1.45, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Wall right B R]
+type  = normal
+spriteno = 116, 0
+layerno = 0
+start = -5, 0
+delta = 1.45, 0.88
+mask  = 1
+
+[BG Wait Room - Wall right B G]
+type  = normal
+spriteno = 116, 1
+layerno = 0
+start = -5, 0
+delta = 1.45, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Wall right B B]
+type  = normal
+spriteno = 116, 2
+layerno = 0
+start = -5, 0
+delta = 1.45, 0.88
+mask  = 1
+trans = add
+
+[BG Wait Room - Entrace R]
+type  = normal
+spriteno = 117, 0
+layerno = 0
+start = 0, 0
+delta = 1.47, 0.90
+mask  = 1
+
+[BG Wait Room - Entrace G]
+type  = normal
+spriteno = 117, 1
+layerno = 0
+start = 0, 0
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Entrace B]
+type  = normal
+spriteno = 117, 2
+layerno = 0
+start = 0, 0
+delta = 1.47, 0.90
+mask  = 1
+trans = add
+
+[BG Wait Room - Fliyer down]
+type  = normal
+spriteno = 1, 5
+layerno = 0
+start = 0, 0
+delta = 1.48, 0.90
+mask  = 1
+
+[BG Wait Room - Statue Center down]
+type  = normal
+spriteno = 1, 12
+layerno = 0
+start = 0, 5
+delta = 1.48, 0.96
+mask  = 1
+
+[BG Wait Room - Top Center]
+type  = normal
+spriteno = 114, 0
+layerno = 0
+start = 0, 5
+delta = 1.50, 0.96
+mask  = 1
+
+[BG Wait Room - Top Center G]
+type  = normal
+spriteno = 114, 1
+layerno = 0
+start = 0, 5
+delta = 1.50, 0.96
+mask  = 1
+trans = add
+
+[BG Wait Room - Top Center B]
+type  = normal
+spriteno = 114, 2
+layerno = 0
+start = 0, 5
+delta = 1.50, 0.96
+mask  = 1
+trans = add
+
+[BG Public left]
+type  = anim
+actionno = 3001
+layerno = 0
+start = -1088, 513
+delta = 1.45, 0.90
+mask  = 1
+
+[BG Public right]
+type  = anim
+actionno = 3002
+layerno = 0
+start = 1088, 513
+delta = 1.45, 0.90
+mask  = 1
+
+[BG green floor Front]
+type  = normal
+spriteno = 1, 4
+layerno = 0
+start = 0, 9
+delta = 1.47, 0.90
+mask  = 1
+
+[BG center way]
+type  = normal
+spriteno = 1, 30
+layerno = 0
+start = 0, 9
+delta = 1.47, 0.90
+mask  = 1
+
+[BG Wait Room - Umbrella B]
+type  = anim
+actionno = 50001
+layerno = 0
+start = -420, 785
+delta = 1.49, 0.93
+mask  = 1
+
+[BG Wait Room - Umbrella C]
+type  = anim
+actionno = 80001
+layerno = 0
+start = 420, 785
+delta = 1.49, 0.93
+mask  = 1
+
+[BG Wait Room - Umbrella A]
+type  = anim
+actionno = 50101
+layerno = 0
+start = -820, 795
+delta = 1.69, 1.13
+mask  = 1
+
+[BG Wait Room - Umbrella D]
+type  = anim
+actionno = 80101
+layerno = 0
+start = 820, 795
+delta = 1.69, 1.13
+mask  = 1
+
+[BG Wait Room - Wall right A diagonal]
+type  = normal
+spriteno = 1, 24
+layerno = 0
+start = -180, 0
+delta = 1.45, 0.90
+mask  = 1
+
+[BG Wait Room - Wall right B diagonal]
+type  = normal
+spriteno = 1, 25
+layerno = 0
+start = 180, 0
+delta = 1.45, 0.90
+mask  = 1
+
+[BG Floor]
+type  = parallax
+spriteno = 1, 1
+layerno = 0
+start = 0, 0
+delta = 1.85, 2
+mask  = 1
+delta = 1.85, 2
+xscale = 1.000,1.150
+
+[BG Floor wall -SHADOW A]
+type  = normal
+spriteno = 1, 36
+layerno = 0
+start = 0, 0
+delta = 1.85, 2
+mask  = 1
+trans = sub
+
+[BG Floor wall -SHADOW B]
+type  = normal
+spriteno = 1, 36
+layerno = 0
+start = 720, 0
+delta = 1.85, 2
+mask  = 1
+trans = sub
+
+[BG Floor wall A]
+type  = normal
+spriteno = 1, 27
+layerno = 0
+start = 0, 0
+delta = 1.85, 2
+mask  = 1
+
+[BG Floor wall A]
+type  = normal
+spriteno = 1, 28
+layerno = 0
+start = 0, 0
+delta = 1.85, 2
+mask  = 1
+
+[BG PAPER A]
+type  = anim
+actionno = 4010
+layerno = 1
+start = 0, 0
+delta = 1.53, 0.60
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=2.7,2.5
+tilespacing = 1860,460
+sin.x=-46,200,0
+
+[BG PAPER B]
+type  = anim
+actionno = 4020
+layerno = 1
+start = 100, 50
+delta = 1.53, 0.60
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=3.7,2.5
+tilespacing = 1860,1460
+sin.x=-46,200,0
+
+[BG PAPER C]
+type  = anim
+actionno = 4030
+layerno = 1
+start = 200, 150
+delta = 1.53, 0.60
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=4.7,2.5
+tilespacing = 1860,2460
+sin.x=-46,200,0
+
+[BG PAPER D]
+type  = anim
+actionno = 4040
+layerno = 1
+start = 300, -150
+delta = 1.53, 0.60
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=5.7,2.5
+tilespacing = 1860,3460
+sin.x=-46,200,0
+
+[BG PAPER A]
+type  = anim
+actionno = 4110
+layerno = 1
+start = 0, 0
+delta = 1.43, 0.90
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=4.7,2.5
+tilespacing = 1260,460
+sin.x=-46,200,0
+
+[BG PAPER B]
+type  = anim
+actionno = 4120
+layerno = 1
+start = 100, 50
+delta = 1.43, 0.90
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=6.7,2.5
+tilespacing = 1260,1460
+sin.x=-46,200,0
+
+[BG PAPER C]
+type  = anim
+actionno = 4130
+layerno = 1
+start = 200, 150
+delta = 1.43, 0.90
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=8.7,2.5
+tilespacing = 1260,2460
+sin.x=-46,200,0
+
+[BG PAPER D]
+type  = anim
+actionno = 4140
+layerno = 1
+start = 340, -350
+delta = 1.43, 0.90
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=10.7,2.5
+tilespacing = 1260,3460
+sin.x=-46,200,0
+
+[BG PAPER A]
+type  = anim
+actionno = 4210
+layerno = 1
+start = 0, 0
+delta = 1.33, 1.30
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=8.7,2.5
+tilespacing = 1260,460
+sin.x=-46,200,0
+
+[BG PAPER B]
+type  = anim
+actionno = 4220
+layerno = 1
+start = 100, 50
+delta = 1.33, 1.30
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=12.7,2.5
+tilespacing = 1260,1460
+sin.x=-46,200,0
+
+[BG PAPER C]
+type  = anim
+actionno = 4230
+layerno = 1
+start = 200, 150
+delta = 1.33, 1.30
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=16.7,2.5
+tilespacing = 1260,2460
+sin.x=-46,200,0
+
+[BG PAPER D]
+type  = anim
+actionno = 4240
+layerno = 1
+start = 900, -550
+delta = 1.33, 1.30
+trans = none
+alpha = 256,0
+mask  = 1
+tile=1,1
+velocity=20.7,2.5
+tilespacing = 1260,3460
+sin.x=-46,200,0
+
+[BG PAPER A]
+type  = anim
+actionno = 4310
+layerno = 1
+start = 0, 0
+delta = 1.23, 2.20
+trans = add
+alpha = 128,203
+mask  = 1
+tile=1,1
+velocity=15.7,2.5
+tilespacing = 3460,860
+sin.x=-46,200,0
+
+[BG PAPER B]
+type  = anim
+actionno = 4320
+layerno = 1
+start = 100, 50
+delta = 1.03, 2.00
+trans = add
+alpha = 128,203
+mask  = 1
+tile=1,1
+velocity=14.7,2.5
+tilespacing = 4560,1460
+sin.x=-46,200,0
+
+[BG PAPER C]
+type  = anim
+actionno = 4330
+layerno = 1
+start = 200, 150
+delta = 1.23, 2.20
+trans = add
+alpha = 128,203
+mask  = 1
+tile=1,1
+velocity=18.7,2.5
+tilespacing = 5860,2460
+sin.x=-46,200,0
+
+[BG PAPER D]
+type  = anim
+actionno = 4340
+layerno = 1
+start = 300, -150
+delta = 1.13, 2.10
+trans = add
+alpha = 128,203
+mask  = 1
+tile=1,1
+velocity=20.7,2.5
+tilespacing = 2260,3460
+sin.x=-46,200,0
+
+[Begin Action 4010]
+4010,0, 0,0, 2
+4010,1, 0,0, 2
+4010,2, 0,0, 2
+4010,3, 0,0, 2
+4010,4, 0,0, 2
+4010,5, 0,0, 3
+
+[Begin Action 4020]
+4020,0, 0,0, 2
+4020,2, 0,0, 2
+4020,4, 0,0, 1
+4020,1, 0,0, 3
+4020,3, 0,0, 2
+4020,5, 0,0, 1
+
+[Begin Action 4030]
+4030,0, 0,0, 4
+4030,2, 0,0, 3
+4030,4, 0,0, 2
+4030,1, 0,0, 2
+4030,3, 0,0, 1
+4030,5, 0,0, 1
+
+[Begin Action 4040]
+4040,0, 0,0, 4
+4040,2, 0,0, 3
+4040,4, 0,0, 2
+4040,1, 0,0, 4
+4040,3, 0,0, 1
+4040,5, 0,0, 1
+
+[Begin Action 4110]
+4110,0, 0,0, 2
+4110,1, 0,0, 2
+4110,2, 0,0, 2
+4110,3, 0,0, 2
+4110,4, 0,0, 2
+4110,5, 0,0, 3
+
+[Begin Action 4120]
+4120,0, 0,0, 2
+4120,2, 0,0, 2
+4120,4, 0,0, 1
+4120,1, 0,0, 3
+4120,3, 0,0, 2
+4120,5, 0,0, 1
+
+[Begin Action 4130]
+4130,0, 0,0, 4
+4130,2, 0,0, 3
+4130,4, 0,0, 2
+4130,1, 0,0, 2
+4130,3, 0,0, 1
+4130,5, 0,0, 1
+
+[Begin Action 4140]
+4140,0, 0,0, 4
+4140,2, 0,0, 3
+4140,4, 0,0, 2
+4140,1, 0,0, 4
+4140,3, 0,0, 1
+4140,5, 0,0, 1
+
+[Begin Action 4210]
+4210,0, 0,0, 2
+4210,1, 0,0, 2
+4210,2, 0,0, 2
+4210,3, 0,0, 2
+4210,4, 0,0, 2
+4210,5, 0,0, 3
+
+[Begin Action 4220]
+4220,0, 0,0, 2
+4220,2, 0,0, 2
+4220,4, 0,0, 1
+4220,1, 0,0, 3
+4220,3, 0,0, 2
+4220,5, 0,0, 1
+
+[Begin Action 4230]
+4230,0, 0,0, 4
+4230,2, 0,0, 3
+4230,4, 0,0, 2
+4230,1, 0,0, 2
+4230,3, 0,0, 1
+4230,5, 0,0, 1
+
+[Begin Action 4240]
+4240,0, 0,0, 4
+4240,2, 0,0, 3
+4240,4, 0,0, 2
+4240,1, 0,0, 4
+4240,3, 0,0, 1
+4240,5, 0,0, 1
+
+[Begin Action 4310]
+4310,0, 0,0, 2
+4310,1, 0,0, 2
+4310,2, 0,0, 2
+4310,3, 0,0, 2
+4310,4, 0,0, 2
+4310,5, 0,0, 3
+
+[Begin Action 4320]
+4320,0, 0,0, 2
+4320,2, 0,0, 2
+4320,4, 0,0, 1
+4320,1, 0,0, 3
+4320,3, 0,0, 2
+4320,5, 0,0, 1
+
+[Begin Action 4330]
+4330,0, 0,0, 4
+4330,2, 0,0, 3
+4330,4, 0,0, 2
+4330,1, 0,0, 2
+4330,3, 0,0, 1
+4330,5, 0,0, 1
+
+[Begin Action 4340]
+4340,0, 0,0, 4
+4340,2, 0,0, 3
+4340,4, 0,0, 2
+4340,1, 0,0, 4
+4340,3, 0,0, 1
+4340,5, 0,0, 1
+
+[Begin Action 200]
+3200,0, 0,0, 5, , AS250D34
+loopstart
+3200,0, 0,0, 3, H, AS250D34
+3200,1, 0,0, 3, H, AS250D34
+3200,2, 0,0, 3, H, AS250D34
+3200,3, 0,0, 3, H, AS250D34
+3200,4, 0,0, 3, H, AS250D34
+3200,4, 0,0, 3, H, AS250D34
+3200,3, 0,0, 3, H, AS250D34
+3200,2, 0,0, 3, H, AS250D34
+3200,1, 0,0, 3, H, AS250D34
+3200,0, 0,0, 3, H, AS250D34
+200,0, 0,0, 3, H, AS250D34
+200,1, 0,0, 3, H, AS250D34
+200,2, 0,0, 3, H, AS250D34
+200,3, 0,0, 3, H, AS250D34
+200,4, 0,0, 3, H, AS250D34
+200,5, 0,0, 3, H, AS250D34
+200,6, 0,0, 3, H, AS250D34
+200,7, 0,0, 3, H, AS250D34
+200,8, 0,0, 3, H, AS250D34
+200,9, 0,0, 3, H, AS250D34
+200,10, 0,0, 3, H, AS250D34
+200,11, 0,0, 3, H, AS250D34
+200,12, 0,0, 3, H, AS250D34
+200,13, 0,0, 3, H, AS250D34
+200,14, 0,0, 3, H, AS250D34
+200,15, 0,0, 3, H, AS250D34
+200,16, 0,0, 3, H, AS250D34
+200,17, 0,0, 3, H, AS250D34
+200,18, 0,0, 3, H, AS250D34
+200,19, 0,0, 3, H, AS250D34
+200,0, 0,0, 3, H, AS250D34
+200,1, 0,0, 3, H, AS250D34
+200,2, 0,0, 3, H, AS250D34
+200,3, 0,0, 3, H, AS250D34
+200,4, 0,0, 3, H, AS250D34
+200,5, 0,0, 3, H, AS250D34
+200,6, 0,0, 3, H, AS250D34
+200,7, 0,0, 3, H, AS250D34
+200,8, 0,0, 3, H, AS250D34
+200,9, 0,0, 3, H, AS250D34
+200,10, 0,0, 3, H, AS250D34
+200,11, 0,0, 3, H, AS250D34
+200,12, 0,0, 2, H, AS250D34
+200,13, 0,0, 2, H, AS250D34
+200,14, 0,0, 2, H, AS250D34
+200,15, 0,0, 3, H, AS250D34
+200,16, 0,0, 2, H, AS250D34
+200,17, 0,0, 2, H, AS250D34
+200,18, 0,0, 2, H, AS250D34
+200,19, 0,0, 2, H, AS250D34
+200,0, 0,0, 3, H, AS250D34
+200,1, 0,0, 3, H, AS250D34
+200,2, 0,0, 3, H, AS250D34
+200,3, 0,0, 3, H, AS250D34
+200,4, 0,0, 3, H, AS250D34
+200,5, 0,0, 3, H, AS250D34
+200,6, 0,0, 3, H, AS250D34
+200,7, 0,0, 3, H, AS250D34
+200,8, 0,0, 3, H, AS250D34
+200,9, 0,0, 3, H, AS250D34
+200,10, 0,0, 3, H, AS250D34
+200,11, 0,0, 3, H, AS250D34
+200,12, 0,0, 3, H, AS250D34
+200,13, 0,0, 3, H, AS250D34
+200,14, 0,0, 3, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,5, 0,0, 3, H, AS250D34
+2200,5, 0,0, 3, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+2200,0, 0,0, 4, H, AS250D34
+2200,1, 0,0, 4, H, AS250D34
+2200,2, 0,0, 4, H, AS250D34
+2200,3, 0,0, 4, H, AS250D34
+2200,4, 0,0, 4, H, AS250D34
+2200,5, 0,0, 4, H, AS250D34
+2200,5, 0,0, 6, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,0, 0,0, 4, H, AS250D34
+2200,0, 0,0, 5, H, AS250D34
+2200,1, 0,0, 5, H, AS250D34
+2200,2, 0,0, 5, H, AS250D34
+2200,3, 0,0, 5, H, AS250D34
+2200,4, 0,0, 5, H, AS250D34
+2200,5, 0,0, 5, H, AS250D34
+2200,5, 0,0, 6, H, AS250D34
+2200,4, 0,0, 5, H, AS250D34
+2200,3, 0,0, 5, H, AS250D34
+2200,2, 0,0, 5, H, AS250D34
+2200,1, 0,0, 5, H, AS250D34
+2200,0, 0,0, 5, H, AS250D34
+2200,0, 0,0, 5, H, AS250D34
+2200,1, 0,0, 5, H, AS250D34
+2200,2, 0,0, 5, H, AS250D34
+2200,3, 0,0, 5, H, AS250D34
+2200,4, 0,0, 5, H, AS250D34
+2200,5, 0,0, 5, H, AS250D34
+2200,5, 0,0, 9, H, AS250D34
+2200,4, 0,0, 5, H, AS250D34
+2200,3, 0,0, 5, H, AS250D34
+2200,2, 0,0, 5, H, AS250D34
+2200,1, 0,0, 5, H, AS250D34
+2200,0, 0,0, 5, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,5, 0,0, 3, H, AS250D34
+2200,5, 0,0, 9, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,5, 0,0, 3, H, AS250D34
+2200,6, 0,0, 3, H, AS250D34
+2200,7, 0,0, 3, H, AS250D34
+2200,8, 0,0, 3, H, AS250D34
+2200,9, 0,0, 3, H, AS250D34
+2200,9, 0,0, 5, H, AS250D34
+2200,9, 0,0, 5, H, AS250D34
+2200,8, 0,0, 5, H, AS250D34
+2200,7, 0,0, 5, H, AS250D34
+2200,6, 0,0, 3, H, AS250D34
+2200,5, 0,0, 3, H, AS250D34
+2200,4, 0,0, 3, H, AS250D34
+2200,3, 0,0, 3, H, AS250D34
+2200,2, 0,0, 3, H, AS250D34
+2200,1, 0,0, 3, H, AS250D34
+2200,0, 0,0, 3, H, AS250D34
+
+[Begin Action 201]
+2100,0, 0,0, 5, , AS250D34
+loopstart
+2200,0, 0,0, 3, , AS250D34
+2200,1, 0,0, 3, , AS250D34
+2200,2, 0,0, 3, , AS250D34
+2200,3, 0,0, 3, , AS250D34
+2200,4, 0,0, 3, , AS250D34
+2200,4, 0,0, 3, , AS250D34
+2200,3, 0,0, 3, , AS250D34
+2200,2, 0,0, 3, , AS250D34
+2200,1, 0,0, 3, , AS250D34
+2200,0, 0,0, 3, , AS250D34
+200,0, 0,0, 3, , AS250D34
+200,1, 0,0, 3, , AS250D34
+200,2, 0,0, 3, , AS250D34
+200,3, 0,0, 3, , AS250D34
+200,4, 0,0, 3, , AS250D34
+200,5, 0,0, 3, , AS250D34
+200,6, 0,0, 3, , AS250D34
+200,7, 0,0, 3, , AS250D34
+200,8, 0,0, 3, , AS250D34
+200,9, 0,0, 3, , AS250D34
+200,10, 0,0, 3, , AS250D34
+200,11, 0,0, 3, , AS250D34
+200,12, 0,0, 3, , AS250D34
+200,13, 0,0, 3, , AS250D34
+200,14, 0,0, 3, , AS250D34
+200,15, 0,0, 3, , AS250D34
+200,16, 0,0, 3, , AS250D34
+200,17, 0,0, 3, , AS250D34
+200,18, 0,0, 3, , AS250D34
+200,19, 0,0, 3, , AS250D34
+200,0, 0,0, 3, , AS250D34
+200,1, 0,0, 3, , AS250D34
+200,2, 0,0, 3, , AS250D34
+200,3, 0,0, 3, , AS250D34
+200,4, 0,0, 3, , AS250D34
+200,5, 0,0, 3, , AS250D34
+200,6, 0,0, 3, , AS250D34
+200,7, 0,0, 3, , AS250D34
+200,8, 0,0, 3, , AS250D34
+200,9, 0,0, 3, , AS250D34
+200,10, 0,0, 3, , AS250D34
+200,11, 0,0, 3, , AS250D34
+200,12, 0,0, 2, , AS250D34
+200,13, 0,0, 2, , AS250D34
+200,14, 0,0, 2, , AS250D34
+200,15, 0,0, 3, , AS250D34
+200,16, 0,0, 2, , AS250D34
+200,17, 0,0, 2, , AS250D34
+200,18, 0,0, 2, , AS250D34
+200,19, 0,0, 2, , AS250D34
+200,0, 0,0, 3, , AS250D34
+200,1, 0,0, 3, , AS250D34
+200,2, 0,0, 3, , AS250D34
+200,3, 0,0, 3, , AS250D34
+200,4, 0,0, 3, , AS250D34
+200,5, 0,0, 3, , AS250D34
+200,6, 0,0, 3, , AS250D34
+200,7, 0,0, 3, , AS250D34
+200,8, 0,0, 3, , AS250D34
+200,9, 0,0, 3, , AS250D34
+200,10, 0,0, 3, , AS250D34
+200,11, 0,0, 3, , AS250D34
+200,12, 0,0, 3, , AS250D34
+200,13, 0,0, 3, , AS250D34
+200,14, 0,0, 3, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,5, 0,0, 3, , AS250D34
+3200,5, 0,0, 3, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+3200,0, 0,0, 4, , AS250D34
+3200,1, 0,0, 4, , AS250D34
+3200,2, 0,0, 4, , AS250D34
+3200,3, 0,0, 4, , AS250D34
+3200,4, 0,0, 4, , AS250D34
+3200,5, 0,0, 4, , AS250D34
+3200,5, 0,0, 6, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,0, 0,0, 4, , AS250D34
+3200,0, 0,0, 5, , AS250D34
+3200,1, 0,0, 5, , AS250D34
+3200,2, 0,0, 5, , AS250D34
+3200,3, 0,0, 5, , AS250D34
+3200,4, 0,0, 5, , AS250D34
+3200,5, 0,0, 5, , AS250D34
+3200,5, 0,0, 6, , AS250D34
+3200,4, 0,0, 5, , AS250D34
+3200,3, 0,0, 5, , AS250D34
+3200,2, 0,0, 5, , AS250D34
+3200,1, 0,0, 5, , AS250D34
+3200,0, 0,0, 5, , AS250D34
+3200,0, 0,0, 5, , AS250D34
+3200,1, 0,0, 5, , AS250D34
+3200,2, 0,0, 5, , AS250D34
+3200,3, 0,0, 5, , AS250D34
+3200,4, 0,0, 5, , AS250D34
+3200,5, 0,0, 5, , AS250D34
+3200,5, 0,0, 9, , AS250D34
+3200,4, 0,0, 5, , AS250D34
+3200,3, 0,0, 5, , AS250D34
+3200,2, 0,0, 5, , AS250D34
+3200,1, 0,0, 5, , AS250D34
+3200,0, 0,0, 5, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,5, 0,0, 3, , AS250D34
+3200,5, 0,0, 9, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,5, 0,0, 3, , AS250D34
+3200,6, 0,0, 3, , AS250D34
+3200,7, 0,0, 3, , AS250D34
+3200,8, 0,0, 3, , AS250D34
+3200,9, 0,0, 3, , AS250D34
+3200,9, 0,0, 5, , AS250D34
+3200,9, 0,0, 5, , AS250D34
+3200,8, 0,0, 5, , AS250D34
+3200,7, 0,0, 5, , AS250D34
+3200,6, 0,0, 3, , AS250D34
+3200,5, 0,0, 3, , AS250D34
+3200,4, 0,0, 3, , AS250D34
+3200,3, 0,0, 3, , AS250D34
+3200,2, 0,0, 3, , AS250D34
+3200,1, 0,0, 3, , AS250D34
+3200,0, 0,0, 3, , AS250D34
+
+[Begin Action 300]
+2300,0, 0,0, 3, , AS250D34
+2300,1, 0,0, 3, , AS250D34
+2300,2, 0,0, 3, , AS250D34
+2300,3, 0,0, 3, , AS250D34
+2300,4, 0,0, 3, , AS250D34
+2300,4, 0,0, 3, , AS250D34
+2300,3, 0,0, 3, , AS250D34
+2300,2, 0,0, 3, , AS250D34
+2300,1, 0,0, 3, , AS250D34
+2300,0, 0,0, 3, , AS250D34
+300,0, 0,0, 3, , AS250D34
+300,1, 0,0, 3, , AS250D34
+300,2, 0,0, 3, , AS250D34
+300,3, 0,0, 3, , AS250D34
+300,4, 0,0, 3, , AS250D34
+300,5, 0,0, 3, , AS250D34
+300,6, 0,0, 3, , AS250D34
+300,7, 0,0, 3, , AS250D34
+300,8, 0,0, 3, , AS250D34
+300,9, 0,0, 3, , AS250D34
+300,10, 0,0, 3, , AS250D34
+300,11, 0,0, 3, , AS250D34
+300,12, 0,0, 3, , AS250D34
+300,13, 0,0, 3, , AS250D34
+300,14, 0,0, 3, , AS250D34
+300,15, 0,0, 3, , AS250D34
+300,16, 0,0, 3, , AS250D34
+300,17, 0,0, 3, , AS250D34
+300,18, 0,0, 3, , AS250D34
+300,19, 0,0, 3, , AS250D34
+300,0, 0,0, 3, , AS250D34
+300,1, 0,0, 3, , AS250D34
+300,2, 0,0, 3, , AS250D34
+300,3, 0,0, 3, , AS250D34
+300,4, 0,0, 3, , AS250D34
+300,5, 0,0, 3, , AS250D34
+300,6, 0,0, 3, , AS250D34
+300,7, 0,0, 3, , AS250D34
+300,8, 0,0, 3, , AS250D34
+300,9, 0,0, 3, , AS250D34
+300,10, 0,0, 3, , AS250D34
+300,11, 0,0, 3, , AS250D34
+300,12, 0,0, 2, , AS250D34
+300,13, 0,0, 2, , AS250D34
+300,14, 0,0, 2, , AS250D34
+300,15, 0,0, 3, , AS250D34
+300,16, 0,0, 2, , AS250D34
+300,17, 0,0, 2, , AS250D34
+300,18, 0,0, 2, , AS250D34
+300,19, 0,0, 2, , AS250D34
+300,0, 0,0, 3, , AS250D34
+300,1, 0,0, 3, , AS250D34
+300,2, 0,0, 3, , AS250D34
+300,3, 0,0, 3, , AS250D34
+300,4, 0,0, 3, , AS250D34
+300,5, 0,0, 3, , AS250D34
+300,6, 0,0, 3, , AS250D34
+300,7, 0,0, 3, , AS250D34
+300,8, 0,0, 3, , AS250D34
+300,9, 0,0, 3, , AS250D34
+300,10, 0,0, 3, , AS250D34
+300,11, 0,0, 3, , AS250D34
+300,12, 0,0, 3, , AS250D34
+300,13, 0,0, 3, , AS250D34
+300,14, 0,0, 3, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,5, 0,0, 3, , AS250D34
+3300,5, 0,0, 3, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+3300,0, 0,0, 4, , AS250D34
+3300,1, 0,0, 4, , AS250D34
+3300,2, 0,0, 4, , AS250D34
+3300,3, 0,0, 4, , AS250D34
+3300,4, 0,0, 4, , AS250D34
+3300,5, 0,0, 4, , AS250D34
+3300,5, 0,0, 6, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,0, 0,0, 4, , AS250D34
+3300,0, 0,0, 5, , AS250D34
+3300,1, 0,0, 5, , AS250D34
+3300,2, 0,0, 5, , AS250D34
+3300,3, 0,0, 5, , AS250D34
+3300,4, 0,0, 5, , AS250D34
+3300,5, 0,0, 5, , AS250D34
+3300,5, 0,0, 6, , AS250D34
+3300,4, 0,0, 5, , AS250D34
+3300,3, 0,0, 5, , AS250D34
+3300,2, 0,0, 5, , AS250D34
+3300,1, 0,0, 5, , AS250D34
+3300,0, 0,0, 5, , AS250D34
+3300,0, 0,0, 5, , AS250D34
+3300,1, 0,0, 5, , AS250D34
+3300,2, 0,0, 5, , AS250D34
+3300,3, 0,0, 5, , AS250D34
+3300,4, 0,0, 5, , AS250D34
+3300,5, 0,0, 5, , AS250D34
+3300,5, 0,0, 9, , AS250D34
+3300,4, 0,0, 5, , AS250D34
+3300,3, 0,0, 5, , AS250D34
+3300,2, 0,0, 5, , AS250D34
+3300,1, 0,0, 5, , AS250D34
+3300,0, 0,0, 5, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,5, 0,0, 3, , AS250D34
+3300,5, 0,0, 9, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,5, 0,0, 3, , AS250D34
+3300,6, 0,0, 3, , AS250D34
+3300,7, 0,0, 3, , AS250D34
+3300,8, 0,0, 3, , AS250D34
+3300,9, 0,0, 3, , AS250D34
+3300,9, 0,0, 5, , AS250D34
+3300,9, 0,0, 5, , AS250D34
+3300,8, 0,0, 5, , AS250D34
+3300,7, 0,0, 5, , AS250D34
+3300,6, 0,0, 3, , AS250D34
+3300,5, 0,0, 3, , AS250D34
+3300,4, 0,0, 3, , AS250D34
+3300,3, 0,0, 3, , AS250D34
+3300,2, 0,0, 3, , AS250D34
+3300,1, 0,0, 3, , AS250D34
+3300,0, 0,0, 3, , AS250D34
+
+[Begin Action 301]
+3300,0, 0,0, 10
+loopstart
+3300,0, 0,0, 3, H, AS250D34
+3300,1, 0,0, 3, H, AS250D34
+3300,2, 0,0, 3, H, AS250D34
+3300,3, 0,0, 3, H, AS250D34
+3300,4, 0,0, 3, H, AS250D34
+3300,4, 0,0, 3, H, AS250D34
+3300,3, 0,0, 3, H, AS250D34
+3300,2, 0,0, 3, H, AS250D34
+3300,1, 0,0, 3, H, AS250D34
+3300,0, 0,0, 3, H, AS250D34
+300,0, 0,0, 3, H, AS250D34
+300,1, 0,0, 3, H, AS250D34
+300,2, 0,0, 3, H, AS250D34
+300,3, 0,0, 3, H, AS250D34
+300,4, 0,0, 3, H, AS250D34
+300,5, 0,0, 3, H, AS250D34
+300,6, 0,0, 3, H, AS250D34
+300,7, 0,0, 3, H, AS250D34
+300,8, 0,0, 3, H, AS250D34
+300,9, 0,0, 3, H, AS250D34
+300,10, 0,0, 3, H, AS250D34
+300,11, 0,0, 3, H, AS250D34
+300,12, 0,0, 3, H, AS250D34
+300,13, 0,0, 3, H, AS250D34
+300,14, 0,0, 3, H, AS250D34
+300,15, 0,0, 3, H, AS250D34
+300,16, 0,0, 3, H, AS250D34
+300,17, 0,0, 3, H, AS250D34
+300,18, 0,0, 3, H, AS250D34
+300,19, 0,0, 3, H, AS250D34
+300,0, 0,0, 3, H, AS250D34
+300,1, 0,0, 3, H, AS250D34
+300,2, 0,0, 3, H, AS250D34
+300,3, 0,0, 3, H, AS250D34
+300,4, 0,0, 3, H, AS250D34
+300,5, 0,0, 3, H, AS250D34
+300,6, 0,0, 3, H, AS250D34
+300,7, 0,0, 3, H, AS250D34
+300,8, 0,0, 3, H, AS250D34
+300,9, 0,0, 3, H, AS250D34
+300,10, 0,0, 3, H, AS250D34
+300,11, 0,0, 3, H, AS250D34
+300,12, 0,0, 2, H, AS250D34
+300,13, 0,0, 2, H, AS250D34
+300,14, 0,0, 2, H, AS250D34
+300,15, 0,0, 3, H, AS250D34
+300,16, 0,0, 2, H, AS250D34
+300,17, 0,0, 2, H, AS250D34
+300,18, 0,0, 2, H, AS250D34
+300,19, 0,0, 2, H, AS250D34
+300,0, 0,0, 3, H, AS250D34
+300,1, 0,0, 3, H, AS250D34
+300,2, 0,0, 3, H, AS250D34
+300,3, 0,0, 3, H, AS250D34
+300,4, 0,0, 3, H, AS250D34
+300,5, 0,0, 3, H, AS250D34
+300,6, 0,0, 3, H, AS250D34
+300,7, 0,0, 3, H, AS250D34
+300,8, 0,0, 3, H, AS250D34
+300,9, 0,0, 3, H, AS250D34
+300,10, 0,0, 3, H, AS250D34
+300,11, 0,0, 3, H, AS250D34
+300,12, 0,0, 3, H, AS250D34
+300,13, 0,0, 3, H, AS250D34
+300,14, 0,0, 3, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,5, 0,0, 3, H, AS250D34
+2300,5, 0,0, 3, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+2300,0, 0,0, 4, H, AS250D34
+2300,1, 0,0, 4, H, AS250D34
+2300,2, 0,0, 4, H, AS250D34
+2300,3, 0,0, 4, H, AS250D34
+2300,4, 0,0, 4, H, AS250D34
+2300,5, 0,0, 4, H, AS250D34
+2300,5, 0,0, 6, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,0, 0,0, 4, H, AS250D34
+2300,0, 0,0, 5, H, AS250D34
+2300,1, 0,0, 5, H, AS250D34
+2300,2, 0,0, 5, H, AS250D34
+2300,3, 0,0, 5, H, AS250D34
+2300,4, 0,0, 5, H, AS250D34
+2300,5, 0,0, 5, H, AS250D34
+2300,5, 0,0, 6, H, AS250D34
+2300,4, 0,0, 5, H, AS250D34
+2300,3, 0,0, 5, H, AS250D34
+2300,2, 0,0, 5, H, AS250D34
+2300,1, 0,0, 5, H, AS250D34
+2300,0, 0,0, 5, H, AS250D34
+2300,0, 0,0, 5, H, AS250D34
+2300,1, 0,0, 5, H, AS250D34
+2300,2, 0,0, 5, H, AS250D34
+2300,3, 0,0, 5, H, AS250D34
+2300,4, 0,0, 5, H, AS250D34
+2300,5, 0,0, 5, H, AS250D34
+2300,5, 0,0, 9, H, AS250D34
+2300,4, 0,0, 5, H, AS250D34
+2300,3, 0,0, 5, H, AS250D34
+2300,2, 0,0, 5, H, AS250D34
+2300,1, 0,0, 5, H, AS250D34
+2300,0, 0,0, 5, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,5, 0,0, 3, H, AS250D34
+2300,5, 0,0, 9, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,5, 0,0, 3, H, AS250D34
+2300,6, 0,0, 3, H, AS250D34
+2300,7, 0,0, 3, H, AS250D34
+2300,8, 0,0, 3, H, AS250D34
+2300,9, 0,0, 3, H, AS250D34
+2300,9, 0,0, 5, H, AS250D34
+2300,9, 0,0, 5, H, AS250D34
+2300,8, 0,0, 5, H, AS250D34
+2300,7, 0,0, 5, H, AS250D34
+2300,6, 0,0, 3, H, AS250D34
+2300,5, 0,0, 3, H, AS250D34
+2300,4, 0,0, 3, H, AS250D34
+2300,3, 0,0, 3, H, AS250D34
+2300,2, 0,0, 3, H, AS250D34
+2300,1, 0,0, 3, H, AS250D34
+2300,0, 0,0, 3, H, AS250D34
+
+[Begin Action 100]
+2100,0, 0,0, 10, , AS250D34
+loopstart
+2100,0, 0,0, 3, , AS250D34
+2100,1, 0,0, 3, , AS250D34
+2100,2, 0,0, 3, , AS250D34
+2100,3, 0,0, 3, , AS250D34
+2100,4, 0,0, 3, , AS250D34
+2100,4, 0,0, 3, , AS250D34
+2100,3, 0,0, 3, , AS250D34
+2100,2, 0,0, 3, , AS250D34
+2100,1, 0,0, 3, , AS250D34
+2100,0, 0,0, 3, , AS250D34
+100,0, 0,0, 3, , AS250D34
+100,1, 0,0, 3, , AS250D34
+100,2, 0,0, 3, , AS250D34
+100,3, 0,0, 3, , AS250D34
+100,4, 0,0, 3, , AS250D34
+100,5, 0,0, 3, , AS250D34
+100,6, 0,0, 3, , AS250D34
+100,7, 0,0, 3, , AS250D34
+100,8, 0,0, 3, , AS250D34
+100,9, 0,0, 3, , AS250D34
+100,10, 0,0, 3, , AS250D34
+100,11, 0,0, 3, , AS250D34
+100,12, 0,0, 3, , AS250D34
+100,13, 0,0, 3, , AS250D34
+100,14, 0,0, 3, , AS250D34
+100,15, 0,0, 3, , AS250D34
+100,16, 0,0, 3, , AS250D34
+100,17, 0,0, 3, , AS250D34
+100,18, 0,0, 3, , AS250D34
+100,19, 0,0, 3, , AS250D34
+100,0, 0,0, 3, , AS250D34
+100,1, 0,0, 3, , AS250D34
+100,2, 0,0, 3, , AS250D34
+100,3, 0,0, 3, , AS250D34
+100,4, 0,0, 3, , AS250D34
+100,5, 0,0, 3, , AS250D34
+100,6, 0,0, 3, , AS250D34
+100,7, 0,0, 3, , AS250D34
+100,8, 0,0, 3, , AS250D34
+100,9, 0,0, 3, , AS250D34
+100,10, 0,0, 3, , AS250D34
+100,11, 0,0, 3, , AS250D34
+100,12, 0,0, 2, , AS250D34
+100,13, 0,0, 2, , AS250D34
+100,14, 0,0, 2, , AS250D34
+100,15, 0,0, 3, , AS250D34
+100,16, 0,0, 2, , AS250D34
+100,17, 0,0, 2, , AS250D34
+100,18, 0,0, 2, , AS250D34
+100,19, 0,0, 2, , AS250D34
+100,0, 0,0, 3, , AS250D34
+100,1, 0,0, 3, , AS250D34
+100,2, 0,0, 3, , AS250D34
+100,3, 0,0, 3, , AS250D34
+100,4, 0,0, 3, , AS250D34
+100,5, 0,0, 3, , AS250D34
+100,6, 0,0, 3, , AS250D34
+100,7, 0,0, 3, , AS250D34
+100,8, 0,0, 3, , AS250D34
+100,9, 0,0, 3, , AS250D34
+100,10, 0,0, 3, , AS250D34
+100,11, 0,0, 3, , AS250D34
+100,12, 0,0, 3, , AS250D34
+100,13, 0,0, 3, , AS250D34
+100,14, 0,0, 3, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,5, 0,0, 3, , AS250D34
+3100,5, 0,0, 3, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+3100,0, 0,0, 4, , AS250D34
+3100,1, 0,0, 4, , AS250D34
+3100,2, 0,0, 4, , AS250D34
+3100,3, 0,0, 4, , AS250D34
+3100,4, 0,0, 4, , AS250D34
+3100,5, 0,0, 4, , AS250D34
+3100,5, 0,0, 6, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,0, 0,0, 4, , AS250D34
+3100,0, 0,0, 5, , AS250D34
+3100,1, 0,0, 5, , AS250D34
+3100,2, 0,0, 5, , AS250D34
+3100,3, 0,0, 5, , AS250D34
+3100,4, 0,0, 5, , AS250D34
+3100,5, 0,0, 5, , AS250D34
+3100,5, 0,0, 6, , AS250D34
+3100,4, 0,0, 5, , AS250D34
+3100,3, 0,0, 5, , AS250D34
+3100,2, 0,0, 5, , AS250D34
+3100,1, 0,0, 5, , AS250D34
+3100,0, 0,0, 5, , AS250D34
+3100,0, 0,0, 5, , AS250D34
+3100,1, 0,0, 5, , AS250D34
+3100,2, 0,0, 5, , AS250D34
+3100,3, 0,0, 5, , AS250D34
+3100,4, 0,0, 5, , AS250D34
+3100,5, 0,0, 5, , AS250D34
+3100,5, 0,0, 9, , AS250D34
+3100,4, 0,0, 5, , AS250D34
+3100,3, 0,0, 5, , AS250D34
+3100,2, 0,0, 5, , AS250D34
+3100,1, 0,0, 5, , AS250D34
+3100,0, 0,0, 5, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,5, 0,0, 3, , AS250D34
+3100,5, 0,0, 9, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,5, 0,0, 3, , AS250D34
+3100,6, 0,0, 3, , AS250D34
+3100,7, 0,0, 3, , AS250D34
+3100,8, 0,0, 3, , AS250D34
+3100,9, 0,0, 3, , AS250D34
+3100,9, 0,0, 5, , AS250D34
+3100,9, 0,0, 5, , AS250D34
+3100,8, 0,0, 5, , AS250D34
+3100,7, 0,0, 5, , AS250D34
+3100,6, 0,0, 3, , AS250D34
+3100,5, 0,0, 3, , AS250D34
+3100,4, 0,0, 3, , AS250D34
+3100,3, 0,0, 3, , AS250D34
+3100,2, 0,0, 3, , AS250D34
+3100,1, 0,0, 3, , AS250D34
+3100,0, 0,0, 3, , AS250D34
+
+[Begin Action 101]
+3100,0, 0,0, 3, H, AS250D34
+3100,1, 0,0, 3, H, AS250D34
+3100,2, 0,0, 3, H, AS250D34
+3100,3, 0,0, 3, H, AS250D34
+3100,4, 0,0, 3, H, AS250D34
+3100,4, 0,0, 3, H, AS250D34
+3100,3, 0,0, 3, H, AS250D34
+3100,2, 0,0, 3, H, AS250D34
+3100,1, 0,0, 3, H, AS250D34
+3100,0, 0,0, 3, H, AS250D34
+100,0, 0,0, 3, H, AS250D34
+100,1, 0,0, 3, H, AS250D34
+100,2, 0,0, 3, H, AS250D34
+100,3, 0,0, 3, H, AS250D34
+100,4, 0,0, 3, H, AS250D34
+100,5, 0,0, 3, H, AS250D34
+100,6, 0,0, 3, H, AS250D34
+100,7, 0,0, 3, H, AS250D34
+100,8, 0,0, 3, H, AS250D34
+100,9, 0,0, 3, H, AS250D34
+100,10, 0,0, 3, H, AS250D34
+100,11, 0,0, 3, H, AS250D34
+100,12, 0,0, 3, H, AS250D34
+100,13, 0,0, 3, H, AS250D34
+100,14, 0,0, 3, H, AS250D34
+100,15, 0,0, 3, H, AS250D34
+100,16, 0,0, 3, H, AS250D34
+100,17, 0,0, 3, H, AS250D34
+100,18, 0,0, 3, H, AS250D34
+100,19, 0,0, 3, H, AS250D34
+100,0, 0,0, 3, H, AS250D34
+100,1, 0,0, 3, H, AS250D34
+100,2, 0,0, 3, H, AS250D34
+100,3, 0,0, 3, H, AS250D34
+100,4, 0,0, 3, H, AS250D34
+100,5, 0,0, 3, H, AS250D34
+100,6, 0,0, 3, H, AS250D34
+100,7, 0,0, 3, H, AS250D34
+100,8, 0,0, 3, H, AS250D34
+100,9, 0,0, 3, H, AS250D34
+100,10, 0,0, 3, H, AS250D34
+100,11, 0,0, 3, H, AS250D34
+100,12, 0,0, 2, H, AS250D34
+100,13, 0,0, 2, H, AS250D34
+100,14, 0,0, 2, H, AS250D34
+100,15, 0,0, 3, H, AS250D34
+100,16, 0,0, 2, H, AS250D34
+100,17, 0,0, 2, H, AS250D34
+100,18, 0,0, 2, H, AS250D34
+100,19, 0,0, 2, H, AS250D34
+100,0, 0,0, 3, H, AS250D34
+100,1, 0,0, 3, H, AS250D34
+100,2, 0,0, 3, H, AS250D34
+100,3, 0,0, 3, H, AS250D34
+100,4, 0,0, 3, H, AS250D34
+100,5, 0,0, 3, H, AS250D34
+100,6, 0,0, 3, H, AS250D34
+100,7, 0,0, 3, H, AS250D34
+100,8, 0,0, 3, H, AS250D34
+100,9, 0,0, 3, H, AS250D34
+100,10, 0,0, 3, H, AS250D34
+100,11, 0,0, 3, H, AS250D34
+100,12, 0,0, 3, H, AS250D34
+100,13, 0,0, 3, H, AS250D34
+100,14, 0,0, 3, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,5, 0,0, 3, H, AS250D34
+2100,5, 0,0, 3, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+2100,0, 0,0, 4, H, AS250D34
+2100,1, 0,0, 4, H, AS250D34
+2100,2, 0,0, 4, H, AS250D34
+2100,3, 0,0, 4, H, AS250D34
+2100,4, 0,0, 4, H, AS250D34
+2100,5, 0,0, 4, H, AS250D34
+2100,5, 0,0, 6, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,0, 0,0, 4, H, AS250D34
+2100,0, 0,0, 5, H, AS250D34
+2100,1, 0,0, 5, H, AS250D34
+2100,2, 0,0, 5, H, AS250D34
+2100,3, 0,0, 5, H, AS250D34
+2100,4, 0,0, 5, H, AS250D34
+2100,5, 0,0, 5, H, AS250D34
+2100,5, 0,0, 6, H, AS250D34
+2100,4, 0,0, 5, H, AS250D34
+2100,3, 0,0, 5, H, AS250D34
+2100,2, 0,0, 5, H, AS250D34
+2100,1, 0,0, 5, H, AS250D34
+2100,0, 0,0, 5, H, AS250D34
+2100,0, 0,0, 5, H, AS250D34
+2100,1, 0,0, 5, H, AS250D34
+2100,2, 0,0, 5, H, AS250D34
+2100,3, 0,0, 5, H, AS250D34
+2100,4, 0,0, 5, H, AS250D34
+2100,5, 0,0, 5, H, AS250D34
+2100,5, 0,0, 9, H, AS250D34
+2100,4, 0,0, 5, H, AS250D34
+2100,3, 0,0, 5, H, AS250D34
+2100,2, 0,0, 5, H, AS250D34
+2100,1, 0,0, 5, H, AS250D34
+2100,0, 0,0, 5, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,5, 0,0, 3, H, AS250D34
+2100,5, 0,0, 9, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,5, 0,0, 3, H, AS250D34
+2100,6, 0,0, 3, H, AS250D34
+2100,7, 0,0, 3, H, AS250D34
+2100,8, 0,0, 3, H, AS250D34
+2100,9, 0,0, 3, H, AS250D34
+2100,9, 0,0, 5, H, AS250D34
+2100,9, 0,0, 5, H, AS250D34
+2100,8, 0,0, 5, H, AS250D34
+2100,7, 0,0, 5, H, AS250D34
+2100,6, 0,0, 3, H, AS250D34
+2100,5, 0,0, 3, H, AS250D34
+2100,4, 0,0, 3, H, AS250D34
+2100,3, 0,0, 3, H, AS250D34
+2100,2, 0,0, 3, H, AS250D34
+2100,1, 0,0, 3, H, AS250D34
+2100,0, 0,0, 3, H, AS250D34
+
+[Begin Action 50101]
+501,0, 0,0, 4
+501,1, 0,0, 4
+501,2, 0,0, 4
+501,3, 0,0, 4
+501,4, 0,0, 4
+501,5, 0,0, 4
+501,5, 0,0, 9
+501,4, 0,0, 5
+501,3, 0,0, 5
+501,2, 0,0, 5
+501,1, 0,0, 5
+501,0, 0,0, 5
+501,0, 0,0, 5
+501,1, 0,0, 5
+501,2, 0,0, 5
+501,3, 0,0, 6
+501,4, 0,0, 5
+501,5, 0,0, 5
+501,5, 0,0, 9
+501,4, 0,0, 5
+501,3, 0,0, 5
+501,2, 0,0, 5
+501,1, 0,0, 5
+501,0, 0,0, 5
+501,0, 0,0, 5
+501,1, 0,0, 5
+501,2, 0,0, 5
+501,3, 0,0, 6
+501,4, 0,0, 5
+501,5, 0,0, 5
+501,5, 0,0, 9
+501,4, 0,0, 5
+501,3, 0,0, 5
+501,2, 0,0, 5
+501,1, 0,0, 5
+501,0, 0,0, 5
+501,0, 0,0, 5
+501,1, 0,0, 5
+501,2, 0,0, 5
+501,3, 0,0, 6
+501,4, 0,0, 5
+501,5, 0,0, 5
+501,5, 0,0, 9
+501,4, 0,0, 5
+501,3, 0,0, 5
+501,2, 0,0, 5
+501,1, 0,0, 5
+501,0, 0,0, 5
+501,0, 0,0, 5
+501,1, 0,0, 5
+501,2, 0,0, 5
+501,3, 0,0, 5
+501,4, 0,0, 6
+501,5, 0,0, 5
+501,5, 0,0, 9
+501,4, 0,0, 5
+501,3, 0,0, 5
+501,2, 0,0, 5
+501,1, 0,0, 5
+501,0, 0,0, 5
+501,0, 0,0, 1
+501,1, 0,0, 1
+501,2, 0,0, 1
+501,3, 0,0, 1
+501,4, 0,0, 1
+501,5, 0,0, 2
+501,6, 0,0, 1
+501,7, 0,0, 1
+501,8, 0,0, 1
+501,9, 0,0, 1
+501,10, 0,0, 2
+501,11, 0,0, 2
+501,12, 0,0, 2
+501,13, 0,0, 2
+501,14, 0,0, 2
+501,15, 0,0, 2
+501,16, 0,0, 2
+501,17, 0,0, 2
+501,18, 0,0, 2
+501,19, 0,0, 2
+501,20, 0,0, 2
+501,21, 0,0, 2
+501,22, 0,0, 2
+501,23, 0,0, 2
+501,24, 0,0, 2
+501,25, 0,0, 2
+501,26, 0,0, 2
+501,27, 0,0, 2
+501,28, 0,0, 2
+501,29, 0,0, 2
+501,30, 0,0, 2
+501,31, 0,0, 2
+501,32, 0,0, 2
+501,33, 0,0, 2
+501,34, 0,0, 2
+501,34, 0,0, 1
+501,33, 0,0, 2
+501,32, 0,0, 2
+501,31, 0,0, 2
+501,30, 0,0, 2
+501,29, 0,0, 2
+501,28, 0,0, 2
+501,27, 0,0, 2
+501,26, 0,0, 2
+501,25, 0,0, 2
+501,24, 0,0, 2
+501,23, 0,0, 2
+501,22, 0,0, 2
+501,21, 0,0, 2
+501,20, 0,0, 2
+501,19, 0,0, 2
+501,18, 0,0, 2
+501,17, 0,0, 2
+501,16, 0,0, 2
+501,15, 0,0, 2
+501,14, 0,0, 2
+501,13, 0,0, 2
+501,12, 0,0, 2
+501,11, 0,0, 2
+501,10, 0,0, 2
+501,9, 0,0, 2
+501,8, 0,0, 2
+501,7, 0,0, 2
+501,6, 0,0, 1
+501,5, 0,0, 1
+501,4, 0,0, 1
+501,3, 0,0, 1
+501,2, 0,0, 1
+501,1, 0,0, 1
+501,0, 0,0, 1
+501,0, 0,0, 1
+501,1, 0,0, 1
+501,2, 0,0, 1
+501,3, 0,0, 1
+501,4, 0,0, 1
+501,5, 0,0, 1
+501,6, 0,0, 1
+501,7, 0,0, 1
+501,8, 0,0, 1
+501,9, 0,0, 1
+501,10, 0,0, 2
+501,11, 0,0, 2
+501,12, 0,0, 2
+501,13, 0,0, 2
+501,14, 0,0, 2
+501,15, 0,0, 2
+501,16, 0,0, 2
+501,17, 0,0, 2
+501,18, 0,0, 2
+501,19, 0,0, 2
+501,20, 0,0, 2
+501,20, 0,0, 2
+501,19, 0,0, 2
+501,18, 0,0, 2
+501,17, 0,0, 2
+501,16, 0,0, 2
+501,15, 0,0, 2
+501,14, 0,0, 2
+501,13, 0,0, 2
+501,12, 0,0, 2
+501,11, 0,0, 2
+501,10, 0,0, 2
+501,9, 0,0, 2
+501,8, 0,0, 2
+501,7, 0,0, 2
+501,6, 0,0, 1
+501,5, 0,0, 1
+501,4, 0,0, 1
+501,3, 0,0, 1
+501,2, 0,0, 1
+501,1, 0,0, 1
+501,0, 0,0, 1
+
+[Begin Action 50001]
+500,0, 0,0, 5
+500,1, 0,0, 5
+500,2, 0,0, 5
+500,3, 0,0, 5
+500,4, 0,0, 5
+500,5, 0,0, 5
+500,5, 0,0, 9
+500,4, 0,0, 5
+500,3, 0,0, 5
+500,2, 0,0, 5
+500,1, 0,0, 5
+500,0, 0,0, 5
+500,0, 0,0, 5
+500,1, 0,0, 5
+500,2, 0,0, 5
+500,3, 0,0, 5
+500,4, 0,0, 5
+500,5, 0,0, 5
+500,5, 0,0, 9
+500,4, 0,0, 5
+500,3, 0,0, 5
+500,2, 0,0, 5
+500,1, 0,0, 5
+500,0, 0,0, 5
+500,0, 0,0, 5
+500,1, 0,0, 5
+500,2, 0,0, 5
+500,3, 0,0, 5
+500,4, 0,0, 5
+500,5, 0,0, 5
+500,5, 0,0, 9
+500,4, 0,0, 5
+500,3, 0,0, 5
+500,2, 0,0, 5
+500,1, 0,0, 5
+500,0, 0,0, 5
+500,0, 0,0, 5
+500,1, 0,0, 5
+500,2, 0,0, 5
+500,3, 0,0, 5
+500,4, 0,0, 5
+500,5, 0,0, 5
+500,5, 0,0, 9
+500,4, 0,0, 5
+500,3, 0,0, 5
+500,2, 0,0, 5
+500,1, 0,0, 5
+500,0, 0,0, 5
+500,0, 0,0, 5
+500,1, 0,0, 5
+500,2, 0,0, 5
+500,3, 0,0, 5
+500,4, 0,0, 5
+500,5, 0,0, 5
+500,5, 0,0, 9
+500,4, 0,0, 5
+500,3, 0,0, 5
+500,2, 0,0, 5
+500,1, 0,0, 5
+500,0, 0,0, 5
+500,0, 0,0, 1
+500,1, 0,0, 1
+500,2, 0,0, 1
+500,3, 0,0, 1
+500,4, 0,0, 1
+500,5, 0,0, 1
+500,6, 0,0, 1
+500,7, 0,0, 1
+500,8, 0,0, 1
+500,9, 0,0, 1
+500,10, 0,0, 2
+500,11, 0,0, 2
+500,12, 0,0, 2
+500,13, 0,0, 2
+500,14, 0,0, 2
+500,15, 0,0, 2
+500,16, 0,0, 2
+500,17, 0,0, 2
+500,18, 0,0, 2
+500,19, 0,0, 2
+500,20, 0,0, 2
+500,21, 0,0, 2
+500,22, 0,0, 2
+500,23, 0,0, 2
+500,24, 0,0, 2
+500,25, 0,0, 2
+500,26, 0,0, 2
+500,27, 0,0, 2
+500,28, 0,0, 2
+500,29, 0,0, 2
+500,30, 0,0, 2
+500,31, 0,0, 2
+500,32, 0,0, 2
+500,33, 0,0, 2
+500,34, 0,0, 1
+500,34, 0,0, 1
+500,33, 0,0, 2
+500,32, 0,0, 2
+500,31, 0,0, 2
+500,30, 0,0, 2
+500,29, 0,0, 2
+500,28, 0,0, 2
+500,27, 0,0, 2
+500,26, 0,0, 2
+500,25, 0,0, 2
+500,24, 0,0, 2
+500,23, 0,0, 2
+500,22, 0,0, 2
+500,21, 0,0, 2
+500,20, 0,0, 2
+500,19, 0,0, 2
+500,18, 0,0, 2
+500,17, 0,0, 2
+500,16, 0,0, 2
+500,15, 0,0, 2
+500,14, 0,0, 2
+500,13, 0,0, 2
+500,12, 0,0, 2
+500,11, 0,0, 2
+500,10, 0,0, 2
+500,9, 0,0, 2
+500,8, 0,0, 2
+500,7, 0,0, 2
+500,6, 0,0, 1
+500,5, 0,0, 1
+500,4, 0,0, 1
+500,3, 0,0, 1
+500,2, 0,0, 1
+500,1, 0,0, 1
+500,0, 0,0, 1
+500,0, 0,0, 1
+500,1, 0,0, 1
+500,2, 0,0, 1
+500,3, 0,0, 1
+500,4, 0,0, 1
+500,5, 0,0, 1
+500,6, 0,0, 1
+500,7, 0,0, 1
+500,8, 0,0, 1
+500,9, 0,0, 1
+500,10, 0,0, 2
+500,11, 0,0, 2
+500,12, 0,0, 2
+500,13, 0,0, 2
+500,14, 0,0, 2
+500,15, 0,0, 2
+500,16, 0,0, 2
+500,17, 0,0, 2
+500,18, 0,0, 2
+500,19, 0,0, 2
+500,20, 0,0, 2
+500,20, 0,0, 2
+500,19, 0,0, 2
+500,18, 0,0, 2
+500,17, 0,0, 2
+500,16, 0,0, 2
+500,15, 0,0, 2
+500,14, 0,0, 2
+500,13, 0,0, 2
+500,12, 0,0, 2
+500,11, 0,0, 2
+500,10, 0,0, 2
+500,9, 0,0, 2
+500,8, 0,0, 2
+500,7, 0,0, 2
+500,6, 0,0, 1
+500,5, 0,0, 1
+500,4, 0,0, 1
+500,3, 0,0, 1
+500,2, 0,0, 1
+500,1, 0,0, 1
+500,0, 0,0, 1
+
+[Begin Action 60001]
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,21, 0,0, 2
+600,22, 0,0, 2
+600,23, 0,0, 2
+600,24, 0,0, 2
+600,25, 0,0, 2
+600,26, 0,0, 2
+600,27, 0,0, 2
+600,28, 0,0, 2
+600,29, 0,0, 2
+600,30, 0,0, 2
+600,31, 0,0, 2
+600,32, 0,0, 2
+600,33, 0,0, 2
+600,34, 0,0, 1
+600,34, 0,0, 1
+600,33, 0,0, 2
+600,32, 0,0, 2
+600,31, 0,0, 2
+600,30, 0,0, 2
+600,29, 0,0, 2
+600,28, 0,0, 2
+600,27, 0,0, 2
+600,26, 0,0, 2
+600,25, 0,0, 2
+600,24, 0,0, 2
+600,23, 0,0, 2
+600,22, 0,0, 2
+600,21, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+
+[Begin Action 60002]
+600,0, 0,0, 5
+loopstart
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,21, 0,0, 2
+600,22, 0,0, 2
+600,23, 0,0, 2
+600,24, 0,0, 2
+600,25, 0,0, 2
+600,26, 0,0, 2
+600,27, 0,0, 2
+600,28, 0,0, 2
+600,29, 0,0, 2
+600,30, 0,0, 2
+600,31, 0,0, 2
+600,32, 0,0, 2
+600,33, 0,0, 2
+600,34, 0,0, 1
+600,34, 0,0, 1
+600,33, 0,0, 2
+600,32, 0,0, 2
+600,31, 0,0, 2
+600,30, 0,0, 2
+600,29, 0,0, 2
+600,28, 0,0, 2
+600,27, 0,0, 2
+600,26, 0,0, 2
+600,25, 0,0, 2
+600,24, 0,0, 2
+600,23, 0,0, 2
+600,22, 0,0, 2
+600,21, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+
+[Begin Action 60003]
+600,0, 0,0, 8
+loopstart
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 5
+600,1, 0,0, 5
+600,2, 0,0, 5
+600,3, 0,0, 5
+600,4, 0,0, 5
+600,5, 0,0, 5
+600,5, 0,0, 9
+600,4, 0,0, 5
+600,3, 0,0, 5
+600,2, 0,0, 5
+600,1, 0,0, 5
+600,0, 0,0, 5
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,21, 0,0, 2
+600,22, 0,0, 2
+600,23, 0,0, 2
+600,24, 0,0, 2
+600,25, 0,0, 2
+600,26, 0,0, 2
+600,27, 0,0, 2
+600,28, 0,0, 2
+600,29, 0,0, 2
+600,30, 0,0, 2
+600,31, 0,0, 2
+600,32, 0,0, 2
+600,33, 0,0, 2
+600,34, 0,0, 1
+600,34, 0,0, 1
+600,33, 0,0, 2
+600,32, 0,0, 2
+600,31, 0,0, 2
+600,30, 0,0, 2
+600,29, 0,0, 2
+600,28, 0,0, 2
+600,27, 0,0, 2
+600,26, 0,0, 2
+600,25, 0,0, 2
+600,24, 0,0, 2
+600,23, 0,0, 2
+600,22, 0,0, 2
+600,21, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+600,0, 0,0, 1
+600,1, 0,0, 1
+600,2, 0,0, 1
+600,3, 0,0, 1
+600,4, 0,0, 1
+600,5, 0,0, 1
+600,6, 0,0, 1
+600,7, 0,0, 1
+600,8, 0,0, 1
+600,9, 0,0, 1
+600,10, 0,0, 2
+600,11, 0,0, 2
+600,12, 0,0, 2
+600,13, 0,0, 2
+600,14, 0,0, 2
+600,15, 0,0, 2
+600,16, 0,0, 2
+600,17, 0,0, 2
+600,18, 0,0, 2
+600,19, 0,0, 2
+600,20, 0,0, 2
+600,20, 0,0, 2
+600,19, 0,0, 2
+600,18, 0,0, 2
+600,17, 0,0, 2
+600,16, 0,0, 2
+600,15, 0,0, 2
+600,14, 0,0, 2
+600,13, 0,0, 2
+600,12, 0,0, 2
+600,11, 0,0, 2
+600,10, 0,0, 2
+600,9, 0,0, 2
+600,8, 0,0, 2
+600,7, 0,0, 2
+600,6, 0,0, 1
+600,5, 0,0, 1
+600,4, 0,0, 1
+600,3, 0,0, 1
+600,2, 0,0, 1
+600,1, 0,0, 1
+600,0, 0,0, 1
+
+[Begin Action 70001]
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 1, , AS123D85
+700,8, 0,0, 1, , AS123D85
+700,9, 0,0, 1, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,21, 0,0, 2, , AS123D85
+700,22, 0,0, 2, , AS123D85
+700,23, 0,0, 2, , AS123D85
+700,24, 0,0, 2, , AS123D85
+700,25, 0,0, 2, , AS123D85
+700,26, 0,0, 2, , AS123D85
+700,27, 0,0, 2, , AS123D85
+700,27, 0,0, 2, , AS123D85
+700,26, 0,0, 2, , AS123D85
+700,25, 0,0, 2, , AS123D85
+700,24, 0,0, 2, , AS123D85
+700,23, 0,0, 2, , AS123D85
+700,22, 0,0, 2, , AS123D85
+700,21, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 1, , AS123D85
+700,8, 0,0, 1, , AS123D85
+700,9, 0,0, 1, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+
+[Begin Action 70101]
+700,0, 0,0, 5, , AS123D85
+loopstart
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,5, 0,0, 5, , AS123D85
+700,5, 0,0, 9, , AS123D85
+700,4, 0,0, 5, , AS123D85
+700,3, 0,0, 5, , AS123D85
+700,2, 0,0, 5, , AS123D85
+700,1, 0,0, 5, , AS123D85
+700,0, 0,0, 5, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 1, , AS123D85
+700,8, 0,0, 1, , AS123D85
+700,9, 0,0, 1, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,21, 0,0, 2, , AS123D85
+700,22, 0,0, 2, , AS123D85
+700,23, 0,0, 2, , AS123D85
+700,24, 0,0, 2, , AS123D85
+700,25, 0,0, 2, , AS123D85
+700,26, 0,0, 2, , AS123D85
+700,27, 0,0, 2, , AS123D85
+700,27, 0,0, 2, , AS123D85
+700,26, 0,0, 2, , AS123D85
+700,25, 0,0, 2, , AS123D85
+700,24, 0,0, 2, , AS123D85
+700,23, 0,0, 2, , AS123D85
+700,22, 0,0, 2, , AS123D85
+700,21, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 1, , AS123D85
+700,8, 0,0, 1, , AS123D85
+700,9, 0,0, 1, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,20, 0,0, 2, , AS123D85
+700,19, 0,0, 2, , AS123D85
+700,18, 0,0, 2, , AS123D85
+700,17, 0,0, 2, , AS123D85
+700,16, 0,0, 2, , AS123D85
+700,15, 0,0, 2, , AS123D85
+700,14, 0,0, 2, , AS123D85
+700,13, 0,0, 2, , AS123D85
+700,12, 0,0, 2, , AS123D85
+700,11, 0,0, 2, , AS123D85
+700,10, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,9, 0,0, 2, , AS123D85
+700,8, 0,0, 2, , AS123D85
+700,7, 0,0, 2, , AS123D85
+700,6, 0,0, 1, , AS123D85
+700,5, 0,0, 1, , AS123D85
+700,4, 0,0, 1, , AS123D85
+700,3, 0,0, 1, , AS123D85
+700,2, 0,0, 1, , AS123D85
+700,1, 0,0, 1, , AS123D85
+700,0, 0,0, 1, , AS123D85
+
+[Begin Action 70002]
+700,0, 0,0, 10
+loopstart
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 1, , AS34D206
+700,8, 0,0, 1, , AS34D206
+700,9, 0,0, 1, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,21, 0,0, 2, , AS34D206
+700,22, 0,0, 2, , AS34D206
+700,23, 0,0, 2, , AS34D206
+700,24, 0,0, 2, , AS34D206
+700,25, 0,0, 2, , AS34D206
+700,26, 0,0, 2, , AS34D206
+700,27, 0,0, 2, , AS34D206
+700,27, 0,0, 2, , AS34D206
+700,26, 0,0, 2, , AS34D206
+700,25, 0,0, 2, , AS34D206
+700,24, 0,0, 2, , AS34D206
+700,23, 0,0, 2, , AS34D206
+700,22, 0,0, 2, , AS34D206
+700,21, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 1, , AS34D206
+700,8, 0,0, 1, , AS34D206
+700,9, 0,0, 1, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+
+[Begin Action 70102]
+700,0, 0,0, 15
+loopstart
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,5, 0,0, 5, , AS34D206
+700,5, 0,0, 9, , AS34D206
+700,4, 0,0, 5, , AS34D206
+700,3, 0,0, 5, , AS34D206
+700,2, 0,0, 5, , AS34D206
+700,1, 0,0, 5, , AS34D206
+700,0, 0,0, 5, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 1, , AS34D206
+700,8, 0,0, 1, , AS34D206
+700,9, 0,0, 1, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,21, 0,0, 2, , AS34D206
+700,22, 0,0, 2, , AS34D206
+700,23, 0,0, 2, , AS34D206
+700,24, 0,0, 2, , AS34D206
+700,25, 0,0, 2, , AS34D206
+700,26, 0,0, 2, , AS34D206
+700,27, 0,0, 2, , AS34D206
+700,27, 0,0, 2, , AS34D206
+700,26, 0,0, 2, , AS34D206
+700,25, 0,0, 2, , AS34D206
+700,24, 0,0, 2, , AS34D206
+700,23, 0,0, 2, , AS34D206
+700,22, 0,0, 2, , AS34D206
+700,21, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 1, , AS34D206
+700,8, 0,0, 1, , AS34D206
+700,9, 0,0, 1, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,20, 0,0, 2, , AS34D206
+700,19, 0,0, 2, , AS34D206
+700,18, 0,0, 2, , AS34D206
+700,17, 0,0, 2, , AS34D206
+700,16, 0,0, 2, , AS34D206
+700,15, 0,0, 2, , AS34D206
+700,14, 0,0, 2, , AS34D206
+700,13, 0,0, 2, , AS34D206
+700,12, 0,0, 2, , AS34D206
+700,11, 0,0, 2, , AS34D206
+700,10, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,9, 0,0, 2, , AS34D206
+700,8, 0,0, 2, , AS34D206
+700,7, 0,0, 2, , AS34D206
+700,6, 0,0, 1, , AS34D206
+700,5, 0,0, 1, , AS34D206
+700,4, 0,0, 1, , AS34D206
+700,3, 0,0, 1, , AS34D206
+700,2, 0,0, 1, , AS34D206
+700,1, 0,0, 1, , AS34D206
+700,0, 0,0, 1, , AS34D206
+
+[Begin Action 80001]
+800,0, 0,0, 5
+loopstart
+800,0, 0,0, 5
+800,1, 0,0, 5
+800,2, 0,0, 5
+800,3, 0,0, 5
+800,4, 0,0, 5
+800,5, 0,0, 5
+800,5, 0,0, 9
+800,4, 0,0, 5
+800,3, 0,0, 5
+800,2, 0,0, 5
+800,1, 0,0, 5
+800,0, 0,0, 5
+800,0, 0,0, 5
+800,1, 0,0, 5
+800,2, 0,0, 5
+800,3, 0,0, 5
+800,4, 0,0, 5
+800,5, 0,0, 5
+800,5, 0,0, 9
+800,4, 0,0, 5
+800,3, 0,0, 5
+800,2, 0,0, 5
+800,1, 0,0, 5
+800,0, 0,0, 5
+800,0, 0,0, 5
+800,1, 0,0, 5
+800,2, 0,0, 5
+800,3, 0,0, 5
+800,4, 0,0, 5
+800,5, 0,0, 5
+800,5, 0,0, 9
+800,4, 0,0, 5
+800,3, 0,0, 5
+800,2, 0,0, 5
+800,1, 0,0, 5
+800,0, 0,0, 5
+800,0, 0,0, 5
+800,1, 0,0, 5
+800,2, 0,0, 5
+800,3, 0,0, 5
+800,4, 0,0, 5
+800,5, 0,0, 5
+800,5, 0,0, 9
+800,4, 0,0, 5
+800,3, 0,0, 5
+800,2, 0,0, 5
+800,1, 0,0, 5
+800,0, 0,0, 5
+800,0, 0,0, 5
+800,1, 0,0, 5
+800,2, 0,0, 5
+800,3, 0,0, 5
+800,4, 0,0, 5
+800,5, 0,0, 5
+800,5, 0,0, 9
+800,4, 0,0, 5
+800,3, 0,0, 5
+800,2, 0,0, 5
+800,1, 0,0, 5
+800,0, 0,0, 5
+800,0, 0,0, 1
+800,1, 0,0, 1
+800,2, 0,0, 1
+800,3, 0,0, 1
+800,4, 0,0, 1
+800,5, 0,0, 1
+800,6, 0,0, 1
+800,7, 0,0, 1
+800,8, 0,0, 1
+800,9, 0,0, 1
+800,10, 0,0, 2
+800,11, 0,0, 2
+800,12, 0,0, 2
+800,13, 0,0, 2
+800,14, 0,0, 2
+800,15, 0,0, 2
+800,16, 0,0, 2
+800,17, 0,0, 2
+800,18, 0,0, 2
+800,19, 0,0, 2
+800,20, 0,0, 2
+800,21, 0,0, 2
+800,22, 0,0, 2
+800,23, 0,0, 2
+800,24, 0,0, 2
+800,25, 0,0, 2
+800,26, 0,0, 2
+800,27, 0,0, 2
+800,28, 0,0, 2
+800,29, 0,0, 2
+800,30, 0,0, 2
+800,31, 0,0, 2
+800,32, 0,0, 2
+800,33, 0,0, 2
+800,34, 0,0, 1
+800,34, 0,0, 1
+800,33, 0,0, 2
+800,32, 0,0, 2
+800,31, 0,0, 2
+800,30, 0,0, 2
+800,29, 0,0, 2
+800,28, 0,0, 2
+800,27, 0,0, 2
+800,26, 0,0, 2
+800,25, 0,0, 2
+800,24, 0,0, 2
+800,23, 0,0, 2
+800,22, 0,0, 2
+800,21, 0,0, 2
+800,20, 0,0, 2
+800,19, 0,0, 2
+800,18, 0,0, 2
+800,17, 0,0, 2
+800,16, 0,0, 2
+800,15, 0,0, 2
+800,14, 0,0, 2
+800,13, 0,0, 2
+800,12, 0,0, 2
+800,11, 0,0, 2
+800,10, 0,0, 2
+800,9, 0,0, 2
+800,8, 0,0, 2
+800,7, 0,0, 2
+800,6, 0,0, 1
+800,5, 0,0, 1
+800,4, 0,0, 1
+800,3, 0,0, 1
+800,2, 0,0, 1
+800,1, 0,0, 1
+800,0, 0,0, 1
+800,0, 0,0, 1
+800,1, 0,0, 1
+800,2, 0,0, 1
+800,3, 0,0, 1
+800,4, 0,0, 1
+800,5, 0,0, 1
+800,6, 0,0, 1
+800,7, 0,0, 1
+800,8, 0,0, 1
+800,9, 0,0, 1
+800,10, 0,0, 2
+800,11, 0,0, 2
+800,12, 0,0, 2
+800,13, 0,0, 2
+800,14, 0,0, 2
+800,15, 0,0, 2
+800,16, 0,0, 2
+800,17, 0,0, 2
+800,18, 0,0, 2
+800,19, 0,0, 2
+800,20, 0,0, 2
+800,20, 0,0, 2
+800,19, 0,0, 2
+800,18, 0,0, 2
+800,17, 0,0, 2
+800,16, 0,0, 2
+800,15, 0,0, 2
+800,14, 0,0, 2
+800,13, 0,0, 2
+800,12, 0,0, 2
+800,11, 0,0, 2
+800,10, 0,0, 2
+800,9, 0,0, 2
+800,8, 0,0, 2
+800,7, 0,0, 2
+800,6, 0,0, 1
+800,5, 0,0, 1
+800,4, 0,0, 1
+800,3, 0,0, 1
+800,2, 0,0, 1
+800,1, 0,0, 1
+800,0, 0,0, 1
+
+[Begin Action 80101]
+801,0, 0,0, 8
+loopstart
+801,0, 0,0, 5
+801,1, 0,0, 5
+801,2, 0,0, 5
+801,3, 0,0, 5
+801,4, 0,0, 5
+801,5, 0,0, 5
+801,5, 0,0, 9
+801,4, 0,0, 5
+801,3, 0,0, 5
+801,2, 0,0, 5
+801,1, 0,0, 5
+801,0, 0,0, 5
+801,0, 0,0, 5
+801,1, 0,0, 5
+801,2, 0,0, 5
+801,3, 0,0, 5
+801,4, 0,0, 5
+801,5, 0,0, 5
+801,5, 0,0, 9
+801,4, 0,0, 5
+801,3, 0,0, 5
+801,2, 0,0, 5
+801,1, 0,0, 5
+801,0, 0,0, 5
+801,0, 0,0, 5
+801,1, 0,0, 5
+801,2, 0,0, 5
+801,3, 0,0, 5
+801,4, 0,0, 5
+801,5, 0,0, 5
+801,5, 0,0, 9
+801,4, 0,0, 5
+801,3, 0,0, 5
+801,2, 0,0, 5
+801,1, 0,0, 5
+801,0, 0,0, 5
+801,0, 0,0, 5
+801,1, 0,0, 5
+801,2, 0,0, 5
+801,3, 0,0, 5
+801,4, 0,0, 5
+801,5, 0,0, 5
+801,5, 0,0, 9
+801,4, 0,0, 5
+801,3, 0,0, 5
+801,2, 0,0, 5
+801,1, 0,0, 5
+801,0, 0,0, 5
+801,0, 0,0, 5
+801,1, 0,0, 5
+801,2, 0,0, 5
+801,3, 0,0, 5
+801,4, 0,0, 5
+801,5, 0,0, 5
+801,5, 0,0, 9
+801,4, 0,0, 5
+801,3, 0,0, 5
+801,2, 0,0, 5
+801,1, 0,0, 5
+801,0, 0,0, 5
+801,0, 0,0, 1
+801,1, 0,0, 1
+801,2, 0,0, 1
+801,3, 0,0, 1
+801,4, 0,0, 1
+801,5, 0,0, 1
+801,6, 0,0, 1
+801,7, 0,0, 1
+801,8, 0,0, 1
+801,9, 0,0, 1
+801,10, 0,0, 2
+801,11, 0,0, 2
+801,12, 0,0, 2
+801,13, 0,0, 2
+801,14, 0,0, 2
+801,15, 0,0, 2
+801,16, 0,0, 2
+801,17, 0,0, 2
+801,18, 0,0, 2
+801,19, 0,0, 2
+801,20, 0,0, 2
+801,21, 0,0, 2
+801,22, 0,0, 2
+801,23, 0,0, 2
+801,24, 0,0, 2
+801,25, 0,0, 2
+801,26, 0,0, 2
+801,27, 0,0, 2
+801,28, 0,0, 2
+801,29, 0,0, 2
+801,30, 0,0, 2
+801,31, 0,0, 2
+801,32, 0,0, 2
+801,33, 0,0, 2
+801,34, 0,0, 1
+801,34, 0,0, 1
+801,33, 0,0, 2
+801,32, 0,0, 2
+801,31, 0,0, 2
+801,30, 0,0, 2
+801,29, 0,0, 2
+801,28, 0,0, 2
+801,27, 0,0, 2
+801,26, 0,0, 2
+801,25, 0,0, 2
+801,24, 0,0, 2
+801,23, 0,0, 2
+801,22, 0,0, 2
+801,21, 0,0, 2
+801,20, 0,0, 2
+801,19, 0,0, 2
+801,18, 0,0, 2
+801,17, 0,0, 2
+801,16, 0,0, 2
+801,15, 0,0, 2
+801,14, 0,0, 2
+801,13, 0,0, 2
+801,12, 0,0, 2
+801,11, 0,0, 2
+801,10, 0,0, 2
+801,9, 0,0, 2
+801,8, 0,0, 2
+801,7, 0,0, 2
+801,6, 0,0, 1
+801,5, 0,0, 1
+801,4, 0,0, 1
+801,3, 0,0, 1
+801,2, 0,0, 1
+801,1, 0,0, 1
+801,0, 0,0, 1
+801,0, 0,0, 1
+801,1, 0,0, 1
+801,2, 0,0, 1
+801,3, 0,0, 1
+801,4, 0,0, 1
+801,5, 0,0, 1
+801,6, 0,0, 1
+801,7, 0,0, 1
+801,8, 0,0, 1
+801,9, 0,0, 1
+801,10, 0,0, 2
+801,11, 0,0, 2
+801,12, 0,0, 2
+801,13, 0,0, 2
+801,14, 0,0, 2
+801,15, 0,0, 2
+801,16, 0,0, 2
+801,17, 0,0, 2
+801,18, 0,0, 2
+801,19, 0,0, 2
+801,20, 0,0, 2
+801,20, 0,0, 2
+801,19, 0,0, 2
+801,18, 0,0, 2
+801,17, 0,0, 2
+801,16, 0,0, 2
+801,15, 0,0, 2
+801,14, 0,0, 2
+801,13, 0,0, 2
+801,12, 0,0, 2
+801,11, 0,0, 2
+801,10, 0,0, 2
+801,9, 0,0, 2
+801,8, 0,0, 2
+801,7, 0,0, 2
+801,6, 0,0, 1
+801,5, 0,0, 1
+801,4, 0,0, 1
+801,3, 0,0, 1
+801,2, 0,0, 1
+801,1, 0,0, 1
+801,0, 0,0, 1
+
+[Begin Action 3001]
+3000,0, 0,0, 7
+3000,1, 0,0, 10
+3000,2, 0,0, 10
+3000,3, 0,0, 10
+3000,4, 0,0, 10
+3000,5, 0,0, 10
+3000,6, 0,0, 10
+3000,7, 0,0, 10
+3000,8, 0,0, 10
+3000,9, 0,0, 10
+3000,10, 0,0, 10
+3000,11, 0,0, 10
+3000,12, 0,0, 10
+3000,13, 0,0, 10
+3000,14, 0,0, 10
+3000,15, 0,0, 10
+3000,16, 0,0, 10
+
+[Begin Action 3002]
+3001,0, 0,0, 7
+3001,1, 0,0, 10
+3001,2, 0,0, 10
+3001,3, 0,0, 10
+3001,4, 0,0, 10
+3001,5, 0,0, 10
+3001,6, 0,0, 10
+3001,7, 0,0, 10
+3001,8, 0,0, 10
+3001,9, 0,0, 10
+3001,10, 0,0, 10
+3001,11, 0,0, 10
+3001,12, 0,0, 10
+3001,13, 0,0, 10
+3001,14, 0,0, 10
+3001,15, 0,0, 10
+3001,16, 0,0, 10
+
+[Begin Action 900]
+1,29, 0,0, 5, , AS13D256
+1,29, 0,5, 5, , AS31D256
+1,29, 0,10, 5, , AS39D256
+1,29, 0,15, 5, , AS48D256
+1,29, 0,20, 5, , AS64D256
+1,29, 0,25, 5, , AS75D256
+1,29, 0,30, 5, , AS86D256
+1,29, 0,35, 5, , AS103D256
+1,29, 0,40, 5, , AS118D256
+1,29, 0,45, 5, , AS131D256
+1,29, 0,50, 5, , AS145D256
+1,29, 0,55, 5, , AS161D256
+1,29, 0,60, 5, , AS175D256
+1,29, 0,65, 5, , AS188D256
+1,29, 0,70, 5, , AS205D256
+1,29, 0,75, 5, , AS225D256
+1,29, 0,80, 5, , A
+1,29, 0,85, 5, , AS225D256
+1,29, 0,90, 5, , AS205D256
+1,29, 0,95, 5, , AS188D256
+1,29, 0,100, 5, , AS175D256
+1,29, 0,105, 5, , AS161D256
+1,29, 0,110, 5, , AS145D256
+1,29, 0,115, 5, , AS131D256
+1,29, 0,120, 5, , AS118D256
+1,29, 0,125, 5, , AS103D256
+1,29, 0,130, 5, , AS86D256
+1,29, 0,135, 5, , AS75D256
+1,29, 0,140, 5, , AS64D256
+1,29, 0,145, 5, , AS48D256
+1,29, 0,150, 5, , AS39D256
+1,29, 0,155, 5, , AS31D256
+1,29, 0,160, 5, , AS13D256
+
+[Begin Action 901]
+1,29, 0,0, 7, , AS13D256
+1,29, 0,5, 7, , AS31D256
+1,29, 0,10, 7, , AS39D256
+1,29, 0,15, 7, , AS48D256
+1,29, 0,20, 7, , AS64D256
+1,29, 0,25, 7, , AS75D256
+1,29, 0,30, 7, , AS86D256
+1,29, 0,35, 7, , AS103D256
+1,29, 0,40, 7, , AS118D256
+1,29, 0,45, 7, , AS131D256
+1,29, 0,50, 7, , AS145D256
+1,29, 0,55, 7, , AS161D256
+1,29, 0,60, 7, , AS175D256
+1,29, 0,65, 7, , AS188D256
+1,29, 0,70, 7, , AS205D256
+1,29, 0,75, 7, , AS225D256
+1,29, 0,80, 7, , A
+1,29, 0,85, 7, , AS225D256
+1,29, 0,90, 7, , AS205D256
+1,29, 0,95, 7, , AS188D256
+1,29, 0,100, 7, , AS175D256
+1,29, 0,105, 7, , AS161D256
+1,29, 0,110, 7, , AS145D256
+1,29, 0,115, 7, , AS131D256
+1,29, 0,120, 7, , AS118D256
+1,29, 0,125, 7, , AS103D256
+1,29, 0,130, 7, , AS86D256
+1,29, 0,135, 7, , AS75D256
+1,29, 0,140, 7, , AS64D256
+1,29, 0,145, 7, , AS48D256
+1,29, 0,150, 7, , AS39D256
+1,29, 0,155, 7, , AS31D256
+1,29, 0,160, 7, , AS13D256
+
+[Begin Action 903]
+1,29, 0,0, 3, , AS13D256
+1,29, 0,5, 3, , AS31D256
+1,29, 0,10, 3, , AS39D256
+1,29, 0,15, 3, , AS48D256
+1,29, 0,20, 3, , AS64D256
+1,29, 0,25, 3, , AS75D256
+1,29, 0,30, 3, , AS86D256
+1,29, 0,35, 3, , AS103D256
+1,29, 0,40, 3, , AS118D256
+1,29, 0,45, 3, , AS131D256
+1,29, 0,50, 3, , AS145D256
+1,29, 0,55, 3, , AS161D256
+1,29, 0,60, 3, , AS175D256
+1,29, 0,65, 3, , AS188D256
+1,29, 0,70, 3, , AS205D256
+1,29, 0,75, 3, , AS225D256
+1,29, 0,80, 3, , A
+1,29, 0,85, 3, , AS225D256
+1,29, 0,90, 3, , AS205D256
+1,29, 0,95, 3, , AS188D256
+1,29, 0,100, 3, , AS175D256
+1,29, 0,105, 3, , AS161D256
+1,29, 0,110, 3, , AS145D256
+1,29, 0,115, 3, , AS131D256
+1,29, 0,120, 3, , AS118D256
+1,29, 0,125, 3, , AS103D256
+1,29, 0,130, 3, , AS86D256
+1,29, 0,135, 3, , AS75D256
+1,29, 0,140, 3, , AS64D256
+1,29, 0,145, 3, , AS48D256
+1,29, 0,150, 3, , AS39D256
+1,29, 0,155, 3, , AS31D256
+1,29, 0,160, 3, , AS13D256

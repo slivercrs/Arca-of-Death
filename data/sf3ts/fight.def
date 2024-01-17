@@ -1,0 +1,667 @@
+
+;=========================================================
+;                                                         
+;   Street Fighter III Third Strike Lifebars by Matmut [1280x720 edit by RAMON GARCIA]     
+;                                                           
+;            Last Update:  DECEMBER, 2017               
+;                                                         
+;                                                         
+;=========================================================
+;                                                         
+;           URL:    http://matmutpage.free.fr            
+;               E-Mail: m4tmut@hotmail.com           
+;RAMON GARCIA URL: https://www.facebook.com/groups/MugenDownloadLinksAndShareRamonGarcia/     
+;                                                         
+;=========================================================
+
+
+
+[Files]
+sff = sf3ts_lifebars.sff
+snd = sf3ts_lifebars.snd
+font1 = font/sf3ts_name_hr.fnt  ;sf3ts_name.fnt
+font2 = font/sf3ts_timer_hr.fnt  ;sf3ts_timer.fnt
+font3 = font/sf3ts_powerp1_hr.fnt  ;sf3ts_powerp1.fnt
+font4 = font/sf3ts_combo_hr.fnt  ;sf3ts_combo.fnt
+font5 = font/sf3ts_powerp2_hr.fnt  ;sf3ts_powerp2.fnt
+font6 = font/sf3ts_number.fnt
+fightfx.sff = fightfx.sff
+fightfx.air = fightfx.air
+common.snd = common.snd
+;-----------------------------------------------------------
+[FightFx]
+scale = 4
+
+;-----------------------------------------------------------
+[Lifebar]
+p1.pos = 641,0  ;320,0
+p1.bg0.spr = 0,0
+p1.bg0.scale = 3,3  ;2,2
+p1.mid.spr = 1,0
+p1.mid.scale = 3,3  ;2,2
+p1.front.spr = 2,0
+p1.front.offset = 2,0
+p1.front.scale = 3,3  ;2,2
+p1.bg0.layerno = 2
+p1.mid.layerno = 2
+p1.front.layerno = 2
+p1.range.x  = -97,-605  ;-49,-303  ;o 1º numero é onde termina a barra de energia e o 2º numero é onde começa
+
+p2.pos = 640,0  ;318,0
+p2.bg0.spr = 0,0
+p2.bg0.scale = 3,3  ;2,2
+p2.bg0.facing = -1
+p2.mid.spr = 1,0
+p2.mid.scale = 3,3  ;2,2
+p2.mid.facing = -1
+p2.front.spr = 2,0
+p2.front.scale = 3,3  ;2,2
+p2.front.facing = -1
+p2.bg0.layerno = 2
+p2.mid.layerno = 2
+p2.front.layerno = 2
+p2.range.x = 97,605  ;49,303  ;o 1º numero é onde termina a barra de energia e o 2º numero é onde começa
+
+[Simul Lifebar]
+p1.pos = 641,0  ;320,0
+p1.bg0.spr = 0,1
+p1.bg0.scale = 3,3  ;2,2
+p1.mid.spr = 1,0
+p1.mid.scale = 3,3  ;2,2
+p1.mid.offset = 0,0  ;0,-12
+p1.front.spr = 2,0
+p1.front.scale = 3,3  ;2,2
+p1.front.offset = 0,0  ;0,-12
+p1.bg0.layerno = 2
+p1.mid.layerno = 2
+p1.front.layerno = 2
+p1.range.x  = -97,-605  ;-49,-303  ;o 1º numero é onde começa a barra de energia e o 2º numero é onde termina
+
+p3.pos    = 641,-25  ;320,0
+p3.mid.spr = 1,0
+p3.mid.scale = 3,3  ;2,2
+p3.front.spr = 2,0
+p3.front.scale = 3,3  ;2,2
+p3.mid.layerno = 2
+p3.front.layerno = 2
+p3.range.x  = -97,-605  ;-49,-303
+
+p2.pos = 640,0  ;318,0
+p2.bg0.spr = 0,1
+p2.bg0.facing = -1
+p2.bg0.scale = 3,3  ;2,2
+p2.mid.spr = 1,0
+p2.mid.offset = 0,0  ;0,-12
+p2.mid.facing = -1
+p2.mid.scale = 3,3  ;2,2
+p2.front.spr = 2,0
+p2.front.scale = 3,3  ;2,2
+p2.front.offset = 0,0  ;0,-12
+p2.front.facing = -1
+p2.bg0.layerno = 2
+p2.mid.layerno = 2
+p2.front.layerno = 2
+p2.range.x = 97,605  ;49,303  ;o 1º numero é onde começa a barra de energia e o 2º numero é onde termina
+
+p4.pos    = 640,-25  ;318,0
+p4.mid.spr = 1,0
+p4.mid.facing = -1
+p4.mid.scale = 3,3  ;2,2
+p4.front.spr = 2,0
+p4.front.scale = 3,3  ;2,2
+p4.front.facing = -1
+p4.mid.layerno = 2
+p4.front.layerno = 2
+p4.range.x = 97,605  ;49,303
+
+[Turns Lifebar]
+p1.pos = 641,0  ;320,0
+p1.bg0.spr = 0,0
+p1.bg0.scale = 3,3  ;2,2
+p1.mid.spr = 1,0
+p1.mid.scale = 3,3  ;2,2
+p1.front.spr = 2,0
+p1.front.offset = 2,0
+p1.front.scale = 3,3  ;2,2
+p1.bg0.layerno = 2
+p1.mid.layerno = 2
+p1.front.layerno = 2
+p1.range.x  = -97,-605  ;-49,-303  ;o 1º numero é onde começa a barra de energia e o 2º numero é onde termina
+
+p2.pos = 640,0  ;318,0
+p2.bg0.spr = 0,0
+p2.bg0.scale = 3,3  ;2,2
+p2.bg0.facing = -1
+p2.mid.spr = 1,0
+p2.mid.scale = 3,3  ;2,2
+p2.mid.facing = -1
+p2.front.spr = 2,0
+p2.front.scale = 3,3  ;2,2
+p2.front.facing = -1
+p2.bg0.layerno = 2
+p2.mid.layerno = 2
+p2.front.layerno = 2
+p2.range.x = 97,605  ;49,303  ;o 1º numero é onde começa a barra de energia e o 2º numero é onde termina
+
+;-----------------------------------------------------------
+[Powerbar]
+p1.pos = 639,15  ;320,15
+p1.bg0.spr = 0,2
+p1.bg0.scale = 2,2  ;2,2
+p1.bg0.layerno = 2
+p1.front.anim = 5
+p1.front.scale = 4,4  ;2,2
+p1.front.layerno = 2
+p1.range.x = -127,-447  ;-65,-225  ;o 1º numero é onde termina a barra de power e o 2º é onde começa a brra de power
+p1.counter.offset = -554,930  ;-553,930  ;-276,464
+p1.counter.scale = 2,2  ;4,4  ;2,2
+p1.counter.font = 3,0,0
+p1.counter.layerno = 2
+
+p2.pos = 640,15 ;320,15
+p2.bg0.spr = 0,3
+p2.bg0.scale = 4,4  ;2,2
+p2.bg0.layerno = 2
+p2.front.anim = 5
+p2.front.scale = 4,4  ;2,2
+p2.front.offset = -1,0
+p2.front.layerno = 2
+p2.front.facing = -1
+p2.range.x  = 128,446  ;64,223  ;o 1º numero é onde começa a barra de power e o 2º é onde ternmina a brra de power
+p2.counter.offset = 554,930  ;553,930  ;276,464
+p2.counter.font = 5,0,0
+p2.counter.scale = 2,2  ;4,4  ;2,2
+p2.counter.layerno = 2
+
+level1.snd = 1,0
+level2.snd = 1,0
+level3.snd = 1,0
+
+;-----------------------------------------------------------
+[Face]
+p1.pos = 40,105  ;18,54
+p1.face.spr = 9000,0
+p1.face.layerno = 2
+p1.face.facing = 1
+p1.face.scale = 1,1
+
+p2.pos = 1244,105  ;620,54
+p2.face.spr = 9000,0
+p2.face.layerno = 2
+p2.face.facing = -1
+p2.face.scale = 1,1
+
+[Simul Face]
+p1.pos = 38,105  ;18,54
+p1.face.spr = 9000,0
+p1.face.layerno = 2
+p1.face.facing = 1
+p1.face.scale = 1,1
+
+p3.pos = 142,125  ;70,64
+p3.face.spr = 9000,0
+p3.face.scale = 0.8,0.8
+p3.face.layerno = 2
+p3.face.facing = 1
+
+p2.pos = 1244,105  ;620,54
+p2.face.spr = 9000,0
+p2.face.layerno = 2
+p2.face.facing = -1
+p2.face.scale = 1,1
+
+p4.pos = 1140,125  ;568,64
+p4.face.spr = 9000,0
+p4.face.scale = 0.8,0.8
+p4.face.layerno = 2
+p4.face.facing = -1
+
+[Turns Face]
+p1.pos = 40,105  ;18,5440,105  ;18,54
+p1.face.spr = 9000,0
+p1.face.scale = 1,1
+p1.face.layerno = 2
+p1.face.facing = 1
+
+p1.teammate.pos = 35,220  ;5,220  ;8,110
+p1.teammate.spacing = 30,0
+p1.teammate.ko.spr = 0,4
+p1.teammate.ko.scale = 4,4  ;2,2
+p1.teammate.ko.layerno = 2
+p1.teammate.face.spr = 9000,0
+p1.teammate.face.scale = 0.5,0.5
+p1.teammate.face.facing = 1
+p1.teammate.face.layerno = 2
+
+p2.pos = 1244,105  ;620,54
+p2.face.spr = 9000,0
+p2.face.scale = 1,1
+p2.face.layerno = 2
+p2.face.facing = -1
+
+p2.teammate.pos = 1250,220  ;1275,220  ;632,110
+p2.teammate.spacing = -30,0
+p2.teammate.ko.spr = 0,4
+p2.teammate.ko.scale = 4,4  ;2,2
+p2.teammate.ko.offset = -40,0  ;-18,0
+p2.teammate.ko.layerno = 2
+p2.teammate.face.spr = 9000,0
+p2.teammate.face.scale = 0.5,0.5
+p2.teammate.face.facing = -1
+p2.teammate.face.layerno = 2
+
+;-----------------------------------------------------------
+[Name]
+p1.pos = 340,120  ;290,60  ;176,60
+p1.name.font = 1,0, 0
+p1.name.layerno = 2
+p1.name.scale = 2,2  ;3,3.5  ;4,4  ;2,2
+
+p2.pos = 940,120  ;990,60  ;464,60
+p2.name.font = 1,0, 0
+p2.name.layerno = 2
+p2.name.scale = 2,2  ;3,3.5  ;4,4  ;2,2
+
+[Simul Name]
+p1.pos = 340,120  ;290,60  ;176,18
+p1.name.font = 1,0, 0
+p1.name.layerno = 2
+p1.name.scale = 2,2  ;3,3.5  ;2,2
+
+p3.pos = 340,40  ;176,60
+p3.name.font = 1,0, 0
+p3.name.layerno = 2
+p3.name.scale = 2,2  ;3,3.5  ;2,2
+
+p2.pos = 940,120  ;990,60  ;464,18
+p2.name.font = 1,0, 0
+p2.name.layerno = 2
+p2.name.scale = 2,2  ;3,3.5  ;2,2
+
+p4.pos = 940,40  ;464,60
+p4.name.font = 1,0, 0
+p4.name.layerno = 2
+p4.name.scale = 2,2  ;3,3.5  ;2,2
+
+[Turns Name]
+p1.pos = 340,120  ;290,60  ;176,60
+p1.name.font = 1,0, 0
+p1.name.layerno = 2
+p1.name.scale = 2,2  ;3,3.5  ;4,4  ;2,2
+
+p2.pos = 940,120  ;990,60  ;464,60
+p2.name.font = 1,0, 0
+p2.name.layerno = 2
+p2.name.scale = 2,2  ;3,3.5  ;4,4  ;2,2
+
+;-----------------------------------------------------------
+[Time]
+pos = 645,130  ;320,62
+counter.font = 2,0, 0
+counter.layerno = 2
+counter.scale = 2,2  ;4,4
+framespercount = 60
+
+;-----------------------------------------------------------
+[Combo] 
+
+team1.pos = 200,360  ;180,360  ;100, 170
+team1.start.x = -50
+team1.text.text = %i H
+team1.text.scale = 2,2  ;4,4
+team1.text.font = 4,0
+team1.text.offset = 6,0
+team1.displaytime = 60
+
+team2.pos = 1060,360  ;534,170
+team2.start.x = 777
+team2.text.text = %i H
+team2.text.scale = 2,2  ;4,4
+team2.text.font = 4,0
+team2.text.offset = 6,0
+team2.displaytime = 60
+
+;-----------------------------------------------------------
+[Round]
+match.wins = 2             
+start.waittime = 20        
+
+pos = 0,0
+
+round.time = 20           
+round1.anim = 10
+round2.anim = 20
+round3.anim = 30
+round4.anim = 40
+round5.anim = 50
+round6.anim = 60
+round7.anim = 70
+round8.anim = 70
+round9.anim = 70
+round1.scale = 3.36,4  ;1.68,2
+round2.scale = 3.36,4  ;1.68,2
+round3.scale = 3.36,4  ;1.68,2
+round4.scale = 3.36,4  ;1.68,2
+round5.scale = 3.36,4  ;1.68,2
+round6.scale = 3.36,4  ;1.68,2
+round7.scale = 3.36,4  ;1.68,2
+round8.scale = 3.36,4  ;1.68,2
+round9.scale = 3.36,4  ;1.68,2
+round1.offset = 100,0  ;52,0
+round2.offset = 100,0  ;52,0
+round3.offset = 100,0  ;52,0
+round4.offset = 100,0  ;52,0
+round5.offset = 100,0  ;52,0
+round6.offset = 100,0  ;52,0
+round7.offset = 100,0  ;52,0
+round8.offset = 100,0  ;52,0
+round9.offset = 100,0  ;52,0
+
+round1.snd = 0,2
+round2.snd = 0,0
+round3.snd = 0,3
+round4.snd = 0,1
+round5.snd = 0,2
+round6.snd = 0,0
+round7.snd = 0,4
+round8.snd = 0,4
+round9.snd = 0,4
+round.sndtime = 15      
+
+fight.time = 35            
+fight.offset = 100,0   ;52,0    
+fight.anim = 100  
+fight.scale = 3.36,4  ;1.68,2        
+fight.snd = -1,0           
+fight.sndtime = 0          
+
+ctrl.time = 115            
+
+KO.time    = 0             
+KO.offset  = 0,0      
+KO.anim    = 110
+KO.scale = 4,4  ;2,2  
+KO.displaytime = 141         
+KO.snd     = 110,0            
+
+DKO.offset = 0,0
+DKO.anim    = 112
+DKO.scale = 4,4  ;2,2
+DKO.displaytime = 130
+DKO.snd    = 112,0
+
+TO.offset  = 0,0
+TO.anim    = 111
+TO.scale = 4,4  ;2,2
+TO.displaytime = 90
+TO.snd     = 111,0
+
+KO.sndtime = 0             
+slow.time  = 60           
+over.waittime = 25        
+over.hittime = 10          
+over.wintime = 85         
+over.time = 210           
+
+win.time = 60
+
+win.offset = 160, 70
+win.font = -1,0
+win.text = %s Wins
+win.displaytime = 540
+
+win2.offset = 160, 70
+win2.font = -1,0
+win2.text = %s and %s Win
+win2.displaytime = 540
+
+draw.offset = 160, 70
+draw.font = -1,0
+draw.scale = 4,4  ;esse é o tamanho dessa imagem eu RAMON GARCIA que adicionei
+draw.text = Draw Game
+draw.displaytime = 540
+
+[Begin Action 5]
+5,0, 0,0, 3
+5,1, 0,0, 3
+5,2, 0,0, 3
+5,1, 0,0, 3
+
+[Begin Action 10]
+10,0, 0,0, 1
+10,1, 0,0, 2
+10,2, 0,0, 1
+10,3, 0,0, 1
+10,4, 0,0, 1
+10,5, 0,0, 1
+10,6, 0,0, 1
+10,7, 0,0, 70
+
+[Begin Action 20]
+20,0, 0,0, 1
+20,1, 0,0, 1
+20,2, 0,0, 1
+20,3, 0,0, 1
+20,4, 0,0, 1
+20,5, 0,0, 1
+20,6, 0,0, 1
+20,7, 0,0, 1
+20,8, 0,0, 70
+
+[Begin Action 30]
+30,0, 0,0, 1
+30,1, 0,0, 2
+30,2, 0,0, 1
+30,3, 0,0, 1
+30,4, 0,0, 1
+30,5, 0,0, 1
+30,6, 0,0, 1
+30,7, 0,0, 70
+
+[Begin Action 40]
+40,0, 0,0, 1
+40,1, 0,0, 1
+40,2, 0,0, 1
+40,3, 0,0, 1
+40,4, 0,0, 1
+40,5, 0,0, 1
+40,6, 0,0, 1
+40,7, 0,0, 1
+40,8, 0,0, 70
+
+[Begin Action 50]
+50,0, 0,0, 1
+50,1, 0,0, 1
+50,2, 0,0, 1
+50,3, 0,0, 1
+50,4, 0,0, 1
+50,5, 0,0, 1
+50,6, 0,0, 1
+50,7, 0,0, 1
+50,8, 0,0, 70
+
+[Begin Action 60]
+60,0, 0,0, 1
+60,1, 0,0, 1
+60,2, 0,0, 1
+60,3, 0,0, 1
+60,4, 0,0, 1
+60,5, 0,0, 1
+60,6, 0,0, 1
+60,7, 0,0, 1
+60,8, 0,0, 70
+
+[Begin Action 70]
+70,0, 0,0, 1
+70,1, 0,0, 1
+70,2, 0,0, 1
+70,3, 0,0, 1
+70,4, 0,0, 1
+70,5, 0,0, 1
+70,6, 0,0, 1
+70,7, 0,0, 1
+70,8, 0,0, 70
+
+[Begin Action 100]
+100,0, 0,0, 5
+100,1, 0,0, 1
+100,2, 0,0, 1
+100,3, 0,0, 1
+100,4, 0,0, 1
+100,5, 0,0, 1
+100,6, 0,0, 1
+100,7, 0,0, 1
+100,8, 0,0, 1
+100,9, 0,0, 1
+100,10, 0,0, 1
+100,11, 0,0, 1
+100,12, 0,0, 2
+100,13, 0,0, 2
+100,14, 0,0, 2
+100,15, 0,0, 2
+100,12, 0,0, 2
+100,16, 0,0, 2
+100,17, 0,0, 2
+100,18, 0,0, 2
+100,19, 0,0, 2
+100,20, 0,0, 2
+100,21, 0,0, 2
+100,13, 0,0, 2
+100,14, 0,0, 2
+100,15, 0,0, 2
+100,22, 0,0, 2
+100,23, 0,0, 2
+100,24, 0,0, 2
+100,12, 0,0, 2
+100,25, 0,0, 2
+100,26, 0,0, 1
+100,27, 0,0, 1
+100,28, 0,0, 1
+100,29, 0,0, 1
+100,30, 0,0, 1
+100,31, 0,0, 1
+
+[Begin Action 110]
+110,1, 0,0, 2
+110,2, 0,0, 2
+110,1, 0,0, 2
+110,0, 0,0, 2
+110,1, 0,0, 2
+110,2, 0,0, 2
+110,1, 0,0, 2
+110,0, 0,0, 2
+110,1, 0,0, 2
+110,2, 0,0, 2
+110,1, 0,0, 2
+110,0, 0,0, 150
+
+[Begin Action 111]
+111,1, 0,0, 2
+111,2, 0,0, 2
+111,1, 0,0, 2
+111,0, 0,0, 2
+111,1, 0,0, 2
+111,2, 0,0, 2
+111,1, 0,0, 2
+111,0, 0,0, 2
+111,1, 0,0, 2
+111,2, 0,0, 2
+111,1, 0,0, 2
+111,0, 0,0, 80
+
+[Begin Action 112]
+112,1, 0,0, 2
+112,2, 0,0, 2
+112,1, 0,0, 2
+112,0, 0,0, 2
+112,1, 0,0, 2
+112,2, 0,0, 2
+112,1, 0,0, 2
+112,0, 0,0, 2
+112,1, 0,0, 2
+112,2, 0,0, 2
+112,1, 0,0, 2
+112,0, 0,0, 119
+
+;-----------------------------------------------------------
+[WinIcon]
+p1.pos = 502,135  ;244,66   
+p2.pos = 754,135  ;372,66  
+p1.iconoffset = -66,0  ;-32,0  
+p2.iconoffset = 66,0  ;32,0
+p1.icon.scale = 4,4  
+p2.icon.scale = 4,4
+
+p1.counter.offset = -102,22
+p1.counter.font = 6,0
+p1.counter.scale = 3,3  ;2,2
+p1.counter.layerno = 2
+p2.counter.offset = 126,22
+p2.counter.scale = 3,3  ;2,2
+p2.counter.font = 6,0
+p2.counter.layerno = 2
+
+p1.n.spr = 120,0
+p2.n.spr = 120,0
+p1.n.layerno = 2
+p2.n.layerno = 2
+p1.n.scale = 2,2
+p2.n.scale = 2,2
+
+p1.s.spr = 120,1
+p2.s.spr = 120,1
+p1.s.layerno = 2
+p2.s.layerno = 2
+p1.s.scale = 2,2
+p2.s.scale = 2,2
+
+p1.h.spr = 120,2
+p2.h.spr = 120,2
+p1.h.layerno = 2
+p2.h.layerno = 2
+p1.h.scale = 2,2
+p2.h.scale = 2,2
+
+p1.throw.spr = 120,3
+p2.throw.spr = 120,3
+p1.throw.layerno = 2
+p2.throw.layerno = 2
+p1.throw.scale = 2,2
+p2.throw.scale = 2,2
+
+p1.c.spr = 120,4
+p2.c.spr = 120,4
+p1.c.layerno = 2
+p2.c.layerno = 2
+p1.c.scale = 2,2
+p2.c.scale = 2,2
+
+p1.t.spr = 120,5
+p2.t.spr = 120,5
+p1.t.layerno = 2
+p2.t.layerno = 2
+p1.t.scale = 2,2
+p2.t.scale = 2,2
+
+p1.suicide.spr = 120,6
+p2.suicide.spr = 120,6
+p1.suicide.layerno = 2
+p2.suicide.layerno = 2
+p1.suicide.scale = 2,2
+p2.suicide.scale = 2,2
+
+p1.teammate.spr = 120,7
+p2.teammate.spr = 120,7
+p1.teammate.layerno = 2
+p2.teammate.layerno = 2
+p1.teammate.scale = 2,2
+p2.teammate.scale = 2,2
+
+p1.perfect.spr = 120,8
+p2.perfect.spr = 120,8
+p1.perfect.layerno = 2
+p2.perfect.layerno = 2
+p1.perfect.scale = 2,2
+p2.perfect.scale = 2,2
+
+useiconupto = 2;4
